@@ -1,0 +1,12 @@
+node_modules/
+dist/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+coverage/
+*.log
+*.tgz
+.DS_Store
+
+# Generated VitePress development files
+.vitepress/cache/
+docs/.vitepress/.temp/
