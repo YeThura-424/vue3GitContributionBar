@@ -2,6 +2,8 @@ import type { App, Plugin } from 'vue'
 
 import './style.css'
 
+import ContributionAnimationControls from './components/ContributionAnimationControls.vue'
+import ContributionButton from './components/ContributionButton.vue'
 import ContributionGraph3D from './components/ContributionGraph3D.vue'
 import ContributionLegend from './components/ContributionLegend.vue'
 import ContributionPalettePicker from './components/ContributionPalettePicker.vue'
@@ -11,6 +13,8 @@ import ContributionTooltip from './components/ContributionTooltip.vue'
 import ContributionUserForm from './components/ContributionUserForm.vue'
 import ContributionYearTabs from './components/ContributionYearTabs.vue'
 
+export { default as ContributionAnimationControls } from './components/ContributionAnimationControls.vue'
+export { default as ContributionButton } from './components/ContributionButton.vue'
 export { default as ContributionGraph3D } from './components/ContributionGraph3D.vue'
 export { default as ContributionLegend } from './components/ContributionLegend.vue'
 export { default as ContributionPalettePicker } from './components/ContributionPalettePicker.vue'
@@ -60,6 +64,8 @@ export { buildSampleContributions, mulberry32 } from './utils/sample'
 export { computeStats } from './utils/stats'
 
 const components = {
+  ContributionButton,
+  ContributionAnimationControls,
   ContributionGraph3D,
   ContributionLegend,
   ContributionPalettePicker,
