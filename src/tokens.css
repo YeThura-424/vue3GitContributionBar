@@ -1,0 +1,74 @@
+/*
+ * Design tokens of vue-contribution-graph-3d.
+ *
+ * Imported by `src/style.css` (the file shipped to consumers) and by the
+ * documentation theme, so both always share the exact same palette.
+ */
+
+@theme {
+  /* ----------------------------------------------------------- typography */
+  --font-cg-sans: Arial, Helvetica, sans-serif;
+  --font-cg-mono: 'Courier New', ui-monospace, monospace;
+
+  /* -------------------------------------------------- chrome (dark/forest) */
+  --color-cg-page: #10160e;
+  --color-cg-panel: #171f14;
+  --color-cg-sidebar: #141c11;
+  --color-cg-field: #10170d;
+  --color-cg-selected: #232e1c;
+  --color-cg-border: #2b3525;
+  --color-cg-text: #e9eedf;
+  --color-cg-muted: #a4b292;
+  --color-cg-accent: #c1ed82;
+  --color-cg-accent-ink: #112004;
+  --color-cg-error: #ffad9b;
+
+  /* ------------------------------------------------- scene + intensity ramp */
+  --color-cg-scene: #0b1714;
+  --color-cg-level-0: #233d2d;
+  --color-cg-level-1: #086338;
+  --color-cg-level-2: #0d9651;
+  --color-cg-level-3: #34cd72;
+  --color-cg-level-4: #aff69d;
+}
+
+@layer components {
+  /*
+   * Scene backdrop and intensity ramp follow the selected palette.
+   */
+  [data-cg-palette='daylight'] {
+    --color-cg-scene: #e8eddf;
+    --color-cg-level-0: #d7dfc8;
+    --color-cg-level-1: #abc886;
+    --color-cg-level-2: #83ad5b;
+    --color-cg-level-3: #588838;
+    --color-cg-level-4: #346426;
+  }
+
+  [data-cg-palette='midnight'] {
+    --color-cg-scene: #0c1020;
+    --color-cg-level-0: #28263d;
+    --color-cg-level-1: #514074;
+    --color-cg-level-2: #7855b1;
+    --color-cg-level-3: #a47ce0;
+    --color-cg-level-4: #d6bafa;
+  }
+
+  /*
+   * Chrome follows the requested theme. Declared last so an explicit
+   * `data-cg-theme="light"` always wins over the dark defaults.
+   */
+  [data-cg-theme='light'] {
+    --color-cg-page: #f0f3e9;
+    --color-cg-panel: #f8faef;
+    --color-cg-sidebar: #f2f5e9;
+    --color-cg-field: #ffffff;
+    --color-cg-selected: #e1ead2;
+    --color-cg-border: #d0d9c3;
+    --color-cg-text: #24321b;
+    --color-cg-muted: #5a6d48;
+    --color-cg-accent: #4d7327;
+    --color-cg-accent-ink: #ffffff;
+    --color-cg-error: #a12d24;
+  }
+}

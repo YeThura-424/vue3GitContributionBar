@@ -1,0 +1,19 @@
+/*
+ * Styles shipped with vue-contribution-graph-3d.
+ *
+ * Only the theme and utility layers are imported on purpose: the preflight
+ * reset is intentionally left out so importing this file can never reset a
+ * consumer's page.
+ *
+ * Import it once in your application:
+ *
+ *   import 'vue-contribution-graph-3d/style.css'
+ */
+
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities) source(none);
+@import './tokens.css';
+
+@source '../src/**/*.{vue,ts}';
