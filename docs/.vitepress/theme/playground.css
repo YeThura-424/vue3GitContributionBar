@@ -1,0 +1,139 @@
+/* --------------------------------------------------- playground scene --- */
+
+.page.playground-route {
+  max-width: 1600px;
+}
+
+.playground-page {
+  padding: 16px 24px 72px;
+}
+
+.playground-dashboard {
+  display: grid;
+  grid-template-columns: 278px minmax(0, 1fr);
+  min-height: calc(100vh - var(--vp-nav-height) - 32px);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  overflow: hidden;
+}
+
+.playground-controls {
+  justify-content: flex-start;
+  border-right: 1px solid var(--vp-c-divider);
+  padding: 16px;
+  background: var(--vp-c-bg-alt);
+}
+
+.playground-controls section + section {
+  margin-top: 0;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 12px;
+}
+
+.playground-user-form > button {
+  height: 40px;
+  font-size: 13px;
+}
+
+.playground-palette-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.playground-palette-picker > button {
+  min-width: 0;
+  gap: 4px;
+  padding-inline: 5px;
+  font-size: 10px;
+}
+
+.playground-palette-picker > button[aria-pressed='true'] {
+  background: var(--color-cg-field);
+  color: var(--color-cg-text);
+}
+
+.playground-palette-picker > button:not([aria-pressed='true']):hover {
+  border-color: var(--cg-picker-accent);
+}
+
+.playground-stage {
+  padding: 24px;
+}
+
+.playground-stage__header h1 {
+  margin: 28px 0 8px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.playground-stage__header > p {
+  margin: 0 0 20px;
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  color: var(--vp-c-text-2);
+}
+
+.playground-stage__header > p span {
+  padding: 0 8px;
+  color: var(--vp-c-brand-1);
+}
+
+.playground-stage__legend {
+  padding: 14px 0 20px;
+}
+
+.playground-stage__stats {
+  border-top: 1px solid var(--vp-c-divider);
+  border-bottom: 0;
+  padding-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .playground-dashboard {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+
+  .playground-stage {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .playground-page {
+    padding: 12px 12px 48px;
+  }
+
+  .playground-dashboard {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .playground-controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--vp-c-divider);
+  }
+
+  .playground-stage {
+    padding: 16px;
+  }
+}
+
+/* Keep library controls aligned with the documentation's active theme.
+ * Palette selection continues to control the graph's contribution colors. */
+.playground-page,
+.playground-page [data-cg-theme] {
+  --color-cg-page: var(--vp-c-bg);
+  --color-cg-panel: var(--vp-c-bg);
+  --color-cg-sidebar: var(--vp-c-bg-alt);
+  --color-cg-field: var(--vp-c-bg-soft);
+  --color-cg-selected: var(--vp-c-brand-soft);
+  --color-cg-border: var(--vp-c-divider);
+  --color-cg-text: var(--vp-c-text-1);
+  --color-cg-muted: var(--vp-c-text-2);
+  --color-cg-accent: var(--vp-c-brand-1);
+  --color-cg-accent-ink: var(--vp-button-brand-text);
+  --color-cg-error: var(--vp-c-danger-1);
+  color: var(--color-cg-text);
+}

@@ -1,0 +1,236 @@
+/*
+ * Styles for the documentation site.
+ *
+ * Tailwind is imported piece by piece instead of through
+ * `@import 'tailwindcss'` so live demos can use its utilities. The library
+ * sources and the markdown pages are scanned so classes used by both the
+ * components and the demos are always generated.
+ */
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' source(none);
+
+@source '../../**/*.md';
+@source '../../../src/**/*.{vue,ts}';
+@source './**/*.{vue,ts}';
+
+@import '../../../src/tokens.css';
+@import './playground.css';
+
+/* Slim scrollbars share the documentation's light and dark theme tokens. */
+:root {
+  --doc-scrollbar-thumb: color-mix(in srgb, var(--vp-c-brand-1) 35%, var(--vp-c-divider));
+  --doc-scrollbar-hover: color-mix(in srgb, var(--vp-c-brand-1) 70%, var(--vp-c-divider));
+}
+
+html,
+body * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--doc-scrollbar-thumb) transparent;
+}
+
+body *:hover {
+  scrollbar-color: var(--doc-scrollbar-hover) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: var(--doc-scrollbar-thumb);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--doc-scrollbar-hover);
+}
+
+@media (forced-colors: active) {
+  html,
+  body * {
+    scrollbar-color: auto;
+  }
+}
+
+/* Card wrapper used by the live demos in the markdown pages. */
+.cg-doc-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 24px;
+  background: var(--vp-c-bg-elv);
+}
+
+.VPHero .heading {
+  gap: 24px;
+}
+
+.VPHero .name {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: max-content;
+  max-width: none;
+  margin: 0;
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: normal;
+  color: var(--vp-c-brand-1);
+}
+
+.VPHero .name::before {
+  width: 30px;
+  height: 1px;
+  background: currentColor;
+  content: '';
+}
+
+.VPHero .name.clip {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.VPHero .text {
+  max-width: 980px;
+  font-size: 112px;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: 0;
+  white-space: normal;
+  color: var(--vp-c-text-1);
+}
+
+.hero-title__accent {
+  color: var(--vp-c-brand-1);
+}
+
+.hero-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  width: 132px;
+  height: 126px;
+  animation: hero-bars-bob 5s ease-in-out infinite;
+}
+
+.hero-bars__bar {
+  position: relative;
+  display: block;
+  flex: 1;
+  min-width: 0;
+  border-right: 7px solid color-mix(in srgb, var(--vp-c-brand-1) 68%, var(--vp-c-bg));
+  background: var(--vp-c-brand-1);
+}
+
+.hero-bars__bar--1 {
+  height: 68px;
+  opacity: 0.7;
+}
+
+.hero-bars__bar--2 {
+  height: 122px;
+  opacity: 0.9;
+}
+
+.hero-bars__bar--3 {
+  height: 88px;
+  opacity: 0.78;
+}
+
+@keyframes hero-bars-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (min-width: 960px) {
+  .VPHero.VPHomeHero.has-image .main {
+    width: 100%;
+    max-width: none;
+    flex-basis: 100%;
+  }
+
+  .VPHero.has-image .container {
+    position: relative;
+  }
+
+  .VPHero.has-image .main {
+    width: 100%;
+    max-width: none;
+  }
+
+  .VPHero.has-image .image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 180px;
+    width: 26%;
+    min-height: 0;
+    margin: 0;
+  }
+
+  .VPHero.has-image .image-container {
+    width: 100%;
+    height: 100%;
+    transform: none;
+  }
+
+  .VPHero.has-image .image-bg {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .VPHero.has-image .image {
+    display: none;
+  }
+
+  .VPHero .text {
+    font-size: 72px;
+    line-height: 1.08;
+  }
+}
+
+@media (max-width: 639px) {
+  .VPHero .heading {
+    gap: 20px;
+  }
+
+  .VPHero .name {
+    font-size: 10px;
+  }
+
+  .VPHero .text {
+    font-size: 46px;
+    line-height: 1.12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bars {
+    animation: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .VPPage:has(.playground-page) .container {
+    max-width: 1600px;
+  }
+}
