@@ -25,6 +25,7 @@ withDefaults(defineProps<{ size?: 'sm' | 'md' | 'lg' }>(), { size: 'md' })
   --ytr-accent: var(--vp-c-brand-1);
   --ytr-contrib: var(--vp-c-text-1);
   --ytr-skyline: var(--vp-c-brand-1);
+  --ytr-font-weight: 700;
   --ytr-gap: 10px;
   --ytr-badge-font-size: 18px;
   --ytr-wordmark-font-size: 24px;
@@ -49,7 +50,7 @@ withDefaults(defineProps<{ size?: 'sm' | 'md' | 'lg' }>(), { size: 'md' })
   gap: 0.14em;
   font-family: var(--vp-font-family-base);
   font-size: var(--ytr-badge-font-size);
-  font-weight: 900;
+  font-weight: var(--ytr-font-weight);
   line-height: 1;
   letter-spacing: -0.045em;
 }
@@ -81,12 +82,12 @@ withDefaults(defineProps<{ size?: 'sm' | 'md' | 'lg' }>(), { size: 'md' })
 
 .ytr__contrib {
   color: var(--ytr-contrib);
-  font-weight: 800;
+  font-weight: var(--ytr-font-weight);
 }
 
 .ytr__skyline {
   color: var(--ytr-skyline);
-  font-weight: 400;
+  font-weight: var(--ytr-font-weight);
 }
 
 .ytr--sm {

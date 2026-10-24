@@ -105,9 +105,7 @@ export default defineConfig({
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./theme', import.meta.url)),
-        'vue-contribution-graph-3d': fileURLToPath(
-          new URL('../../src/index.ts', import.meta.url),
-        ),
+        'vue-contribution-graph-3d': fileURLToPath(new URL('../../src/index.ts', import.meta.url)),
       },
     },
   },

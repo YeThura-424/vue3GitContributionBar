@@ -21,6 +21,9 @@
 
 /* Slim scrollbars share the documentation's light and dark theme tokens. */
 :root {
+  --vp-layout-max-width: 1440px;
+  --vp-sidebar-width: 360px;
+  --doc-content-max-width: calc(var(--vp-layout-max-width) - 64px);
   --doc-scrollbar-thumb: color-mix(in srgb, var(--vp-c-brand-1) 35%, var(--vp-c-divider));
   --doc-scrollbar-hover: color-mix(in srgb, var(--vp-c-brand-1) 70%, var(--vp-c-divider));
 }
@@ -229,8 +232,58 @@ body *:hover {
   }
 }
 
+/* Share the same outer edges across the navbar, home page and playground. */
+.VPNavBar:not(.has-sidebar) .container,
+.VPHero .container,
+.VPFeatures .container,
+.VPHomeContent .container {
+  max-width: var(--doc-content-max-width);
+}
+
+.VPPage:has(.playground-page) {
+  width: 100%;
+  max-width: var(--vp-layout-max-width);
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .playground-page {
+    padding-inline: 32px;
+  }
+}
+
+/* Keep the article within the space remaining beside the wider sidebar. */
 @media (min-width: 960px) {
-  .VPPage:has(.playground-page) .container {
-    max-width: 1600px;
+  .VPDoc.has-sidebar .content {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .VPHero.VPHomeHero,
+  .VPFeatures.VPHomeFeatures {
+    padding-inline: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .VPNavBar .wrapper {
+    padding-inline: 24px;
+  }
+
+  .playground-page {
+    padding-inline: 24px;
+  }
+}
+
+/* Preserve room for the full wordmark on tablet-sized navigation bars. */
+@media (min-width: 768px) and (max-width: 959px) {
+  .VPNavBarSearch .DocSearch-Button-Placeholder,
+  .VPNavBarSearch .DocSearch-Button-Keys {
+    display: none;
+  }
+
+  .VPNavBarSearch .DocSearch-Search-Icon {
+    margin-right: 0;
   }
 }
