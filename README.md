@@ -18,6 +18,17 @@ import 'vue-contribution-graph-3d/style.css'
 </template>
 ```
 
+## Component previews
+
+The same component rendered with each built-in palette:
+
+| Forest                                                                                              | Daylight                                                                                                  | Midnight                                                                                                  |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| [![Forest 3D contribution graph](docs/public/previews/forest.png)](docs/public/previews/forest.png) | [![Daylight 3D contribution graph](docs/public/previews/daylight.png)](docs/public/previews/daylight.png) | [![Midnight 3D contribution graph](docs/public/previews/midnight.png)](docs/public/previews/midnight.png) |
+
+Click a thumbnail for the full-size image. For interactive versions, run `npm run dev` and open
+[`/guide/previews`](http://localhost:5173/guide/previews). The demos use sample data and require no GitHub access.
+
 ## Features
 
 - 🧊 **Real 3D** — logarithmic height scale, soft shadows, per-palette scene colors, orbit
@@ -77,7 +88,7 @@ component code for you as you change the controls.
 
 | Script               | What it does                                   |
 | -------------------- | ---------------------------------------------- |
-| `npm run dev`        | VitePress docs site with hot reload.            |
+| `npm run dev`        | VitePress docs site with hot reload.           |
 | `npm run build`      | Build `dist/` (ES, CJS, `.d.ts`, `style.css`). |
 | `npm run typecheck`  | `vue-tsc --noEmit`.                            |
 | `npm test`           | Vitest suite.                                  |
