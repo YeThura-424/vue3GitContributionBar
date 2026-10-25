@@ -10,3 +10,6 @@ coverage/
 # Generated VitePress development files
 .vitepress/cache/
 docs/.vitepress/.temp/
+
+# Vue documentation build
+docs/dist/

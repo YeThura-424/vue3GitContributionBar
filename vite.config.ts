@@ -7,8 +7,7 @@ import dts from 'vite-plugin-dts'
 /**
  * Library build for vue-contribution-graph-3d.
  *
- * The documentation site lives in `docs/` and is built with VitePress
- * (see `docs/.vitepress/config.mts`).
+ * The Vue documentation app lives in `docs/` and uses `vite.docs.config.ts`.
  */
 export default defineConfig({
   plugins: [
