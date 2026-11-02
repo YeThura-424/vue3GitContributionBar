@@ -21,9 +21,9 @@ import { useSiteTheme } from '@/composables/useSiteTheme'
 const username = ref('torvalds')
 const draft = ref('torvalds')
 
-const { days, years, year, status, error, loading, load, reload, setYear } = useGitHubContributions(
-  { username: () => username.value },
-)
+const { days, years, year, status, error, loading, reload, setYear } = useGitHubContributions({
+  username: () => username.value,
+})
 
 const stats = useContributionStats(() => days.value)
 const siteTheme = useSiteTheme()
@@ -160,7 +160,7 @@ async function copySnippet(): Promise<void> {
       </aside>
 
       <!-- ------------------------------------------------------------ stage -->
-      <main class="playground-stage flex min-w-0 flex-col overflow-hidden">
+      <div class="playground-stage flex min-w-0 flex-col overflow-hidden">
         <div class="playground-stage__header">
           <ContributionToolbar
             badge="Public activity"
@@ -170,7 +170,7 @@ async function copySnippet(): Promise<void> {
             @replay="graph?.replay()"
             @reset="graph?.resetView()"
           />
-          <h1>{{ username }}</h1>
+          <h3>{{ username }}</h3>
           <p>{{ year }}-01-01 <span>→</span> {{ year }}-12-31</p>
         </div>
 
@@ -211,16 +211,12 @@ async function copySnippet(): Promise<void> {
           :palette="palette"
           :theme="siteTheme"
         />
-      </main>
+      </div>
     </div>
 
     <!-- --------------------------------------------------------- snippet -->
-    <section
-      class="mt-6 overflow-hidden rounded-[10px] border border-(--vp-c-divider) bg-(--vp-c-bg-soft)"
-    >
-      <div
-        class="flex items-center justify-between gap-3 border-b border-(--vp-c-divider) px-4 py-3"
-      >
+    <section class="snippet-panel">
+      <div class="snippet-panel__header">
         <h2 class="font-cg-sans text-xs font-semibold uppercase tracking-wide text-(--vp-c-text-2)">
           Generated snippet
         </h2>
@@ -264,9 +260,7 @@ async function copySnippet(): Promise<void> {
         </ContributionButton>
       </div>
 
-      <pre
-        class="overflow-x-auto px-4 py-4 font-cg-mono text-[12px] leading-relaxed text-(--vp-c-text-1)"
-      ><code>{{ snippet }}</code></pre>
+      <pre class="snippet-panel__code"><code>{{ snippet }}</code></pre>
     </section>
   </div>
 </template>
