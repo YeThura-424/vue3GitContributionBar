@@ -43,31 +43,15 @@ const emit = defineEmits<{
       <slot name="badge">{{ badge }}</slot>
     </span>
 
-    <div class="flex items-center gap-5">
+    <div class="flex flex-wrap items-center gap-3">
       <slot />
 
       <button
         type="button"
-        class="inline-flex items-center gap-1 border-0 bg-transparent p-0 font-cg-sans text-xs text-cg-muted transition-colors hover:text-cg-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cg-accent disabled:cursor-wait disabled:opacity-50"
+        class="inline-flex items-center gap-2 rounded-md border-0 bg-transparent px-2.5 py-2 font-cg-sans text-xs text-cg-text transition-colors hover:text-cg-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cg-accent disabled:cursor-wait disabled:opacity-50"
         :disabled="disabled"
         @click="emit('replay')"
       >
-        <svg class="h-3 w-3" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-          <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
-          <path
-            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
-          />
-        </svg>
-        {{ replayLabel }}
-      </button>
-
-      <button
-        type="button"
-        class="inline-flex items-center gap-1 border-0 bg-transparent p-0 font-cg-sans text-xs text-cg-muted transition-colors hover:text-cg-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cg-accent disabled:cursor-wait disabled:opacity-50"
-        :disabled="disabled"
-        @click="emit('reset')"
-      >
-        {{ resetLabel }}
         <svg
           class="h-4 w-4"
           viewBox="0 0 24 24"
@@ -78,11 +62,33 @@ const emit = defineEmits<{
           stroke-linejoin="round"
           aria-hidden="true"
         >
-          <path d="M4.5 8.5a8 8 0 1 1-.3 7" />
-          <path d="M4 3.5v5h5" />
-          <path d="m9 11 3-1.5 3 1.5v4l-3 1.5L9 15z" />
-          <path d="m9 11 3 1.5 3-1.5M12 12.5v4" />
+          <path d="M3 10a9 9 0 1 1 2.6 8.4" />
+          <path d="M3 4v6h6" />
+          <path d="m10 8 6 4-6 4V8Z" />
         </svg>
+        {{ replayLabel }}
+      </button>
+
+      <button
+        type="button"
+        class="inline-flex items-center gap-2 rounded-md border-0 bg-transparent px-2.5 py-2 font-cg-sans text-xs text-cg-text transition-colors hover:text-cg-accent focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cg-accent disabled:cursor-wait disabled:opacity-50"
+        :disabled="disabled"
+        @click="emit('reset')"
+      >
+        <svg
+          class="h-4 w-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" />
+          <path d="m12 7 5 3v5l-5 3-5-3v-5l5-3Zm-5 3 5 3 5-3m-5 3v5" />
+        </svg>
+        {{ resetLabel }}
       </button>
     </div>
   </div>
