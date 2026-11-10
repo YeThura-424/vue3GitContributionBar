@@ -1,0 +1,390 @@
+/* Documentation styling follows vue3-mobileNav. Library styles stay in src/. */
+@import 'tailwindcss/utilities.css' source(none);
+@source './**/*.{vue,ts}';
+:root {
+  --vp-c-bg: var(--surface);
+  --vp-c-bg-alt: var(--surface-soft);
+  --vp-c-bg-soft: var(--surface-soft);
+  --vp-c-divider: var(--border);
+  --vp-c-text-1: var(--text);
+  --vp-c-text-2: var(--muted);
+  --vp-c-brand-1: var(--primary);
+  --vp-c-brand-soft: var(--lavender);
+  --vp-button-brand-text: var(--on-primary);
+  --vp-c-danger-1: #c33c55;
+  --vp-font-family-mono: 'Cascadia Code', Consolas, monospace;
+}
+.sidebar-group-label {
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+.sidebar nav > a {
+  font-size: 11px;
+}
+.nav-symbol {
+  width: 18px;
+  text-align: center;
+  font-size: 17px;
+}
+.search-label input {
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface-soft);
+  color: var(--text);
+  font-size: 11px;
+}
+.search-empty {
+  padding: 10px;
+  font-size: 12px;
+}
+.feature-icon {
+  font-size: 25px;
+  color: var(--primary);
+}
+.reference-content {
+  min-width: 0;
+}
+.reference-content > h2.page-title {
+  font-size: 29px;
+  margin: 0 0 22px;
+  color: var(--text);
+}
+.reference-content > h2:not(.page-title) {
+  font-size: 21px;
+  margin: 30px 0 15px;
+  letter-spacing: -0.4px;
+}
+.reference-content > h3 {
+  margin-top: 22px;
+}
+.reference-content p,
+.reference-content li {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+.reference-content ul,
+.reference-content ol {
+  padding-left: 22px;
+}
+.reference-content table {
+  display: block;
+  overflow-x: auto;
+  margin: 20px 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.reference-content th,
+.reference-content td {
+  font-size: 11px;
+  min-width: 100px;
+}
+.reference-content table code {
+  white-space: normal;
+}
+.cg-doc-card {
+  padding: 20px;
+  margin: 22px 0;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface);
+}
+.custom-block {
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  border-radius: 9px;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+.custom-block p:last-child {
+  margin-bottom: 0;
+}
+.custom-block-title {
+  font-weight: 650;
+  color: var(--primary);
+}
+.hero-showcase {
+  display: block;
+}
+.hero-showcase > [data-cg-theme] {
+  max-width: 100%;
+}
+.showcase-foot {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 16px;
+}
+.playground-controls h2 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+.playground-stage {
+  min-width: 0;
+}
+.playground-dashboard {
+  grid-template-columns: 278px minmax(0, 1fr);
+}
+@media (max-width: 1100px) {
+  .playground-dashboard {
+    grid-template-columns: 1fr !important;
+  }
+  .playground-controls {
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--border);
+  }
+}
+@media (max-width: 640px) {
+  .brand {
+    font-size: 16px;
+  }
+  .site-header {
+    gap: 8px;
+  }
+  .hero-showcase {
+    display: block;
+  }
+  .header-actions {
+    gap: 3px;
+  }
+  .github-link {
+    font-size: 0;
+  }
+  .github-link span {
+    font-size: 20px;
+  }
+  .reference-content > h2.page-title {
+    font-size: 25px;
+  }
+  .cg-doc-card {
+    padding: 12px;
+  }
+}
+/* --------------------------------------------------- playground scene --- */
+
+.playground-page {
+  padding: 0;
+}
+
+.playground-dashboard {
+  display: grid;
+  grid-template-columns: 278px minmax(0, 1fr);
+  min-height: 640px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  overflow: hidden;
+}
+
+.playground-controls {
+  justify-content: flex-start;
+  border-right: 1px solid var(--vp-c-divider);
+  padding: 16px;
+  background: var(--vp-c-bg-alt);
+}
+
+.playground-controls section + section {
+  margin-top: 0;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 12px;
+}
+
+.playground-user-form > button {
+  height: 40px;
+  font-size: 13px;
+}
+
+.playground-palette-picker {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.playground-palette-picker > button {
+  min-width: 0;
+  gap: 4px;
+  padding-inline: 5px;
+  font-size: 10px;
+}
+
+.playground-palette-picker > button[aria-pressed='true'] {
+  background: var(--color-cg-field);
+  color: var(--color-cg-text);
+}
+
+.playground-palette-picker > button:not([aria-pressed='true']):hover {
+  border-color: var(--cg-picker-accent);
+}
+
+.playground-stage {
+  padding: 24px;
+}
+
+.playground-stage__header h3 {
+  margin: 28px 0 8px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.playground-stage__header > p {
+  margin: 0 0 20px;
+  font-family: var(--vp-font-family-mono);
+  font-size: 11px;
+  color: var(--vp-c-text-2);
+}
+
+.playground-stage__header > p span {
+  padding: 0 8px;
+  color: var(--vp-c-brand-1);
+}
+
+.playground-stage__legend {
+  padding: 14px 0 20px;
+}
+
+.playground-stage__stats {
+  border-top: 1px solid var(--vp-c-divider);
+  border-bottom: 0;
+  padding-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .playground-dashboard {
+    grid-template-columns: 250px minmax(0, 1fr);
+  }
+
+  .playground-stage {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .playground-page {
+    padding: 0;
+  }
+
+  .playground-dashboard {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .playground-controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--vp-c-divider);
+  }
+
+  .playground-stage {
+    padding: 16px;
+  }
+}
+
+/* Keep library controls aligned with the documentation's active theme.
+ * Palette selection continues to control the graph's contribution colors. */
+.cg-doc-card [data-cg-theme],
+.playground-page,
+.playground-page [data-cg-theme] {
+  --color-cg-page: var(--vp-c-bg);
+  --color-cg-panel: var(--vp-c-bg);
+  --color-cg-sidebar: var(--vp-c-bg-alt);
+  --color-cg-field: var(--vp-c-bg-soft);
+  --color-cg-selected: var(--vp-c-brand-soft);
+  --color-cg-border: var(--vp-c-divider);
+  --color-cg-text: var(--vp-c-text-1);
+  --color-cg-muted: var(--vp-c-text-2);
+  --color-cg-accent: var(--vp-c-brand-1);
+  --color-cg-accent-ink: var(--vp-button-brand-text);
+  --color-cg-error: var(--vp-c-danger-1);
+  color: var(--color-cg-text);
+}
+
+/* Component previews use the same spacing and focus treatment as the docs shell. */
+.search-label {
+  display: block;
+  margin-bottom: 16px;
+}
+.sidebar nav {
+  padding-top: 2px;
+}
+.snippet-panel {
+  margin-top: 28px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface-soft);
+}
+.snippet-panel__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+}
+.snippet-panel__header h2 {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.snippet-panel__code {
+  margin: 0;
+  padding: 24px;
+  overflow-x: auto;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--text);
+  tab-size: 2;
+}
+.palette-demo {
+  padding-block: 28px;
+}
+.palette-demo__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.palette-demo__options button {
+  padding: 9px 16px;
+  color: var(--primary);
+  background: var(--surface);
+}
+.palette-demo__options button[aria-pressed='true'] {
+  background: var(--surface-soft);
+}
+.palette-demo__legend {
+  margin-top: 20px;
+}
+.palette-picker-preview {
+  margin-top: 24px;
+}
+.tooltip-demo {
+  position: relative;
+  min-height: 320px;
+  padding: 28px;
+}
+.reference-content .cg-tooltip p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-cg-text);
+}
+.reference-content .cg-tooltip p + p {
+  margin-top: 6px;
+  color: var(--color-cg-muted);
+}
+@media (max-width: 640px) {
+  .snippet-panel__header {
+    padding: 16px 18px;
+  }
+  .snippet-panel__code {
+    padding: 20px 18px;
+  }
+  .tooltip-demo {
+    min-height: 300px;
+  }
+}

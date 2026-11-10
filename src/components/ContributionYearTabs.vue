@@ -49,7 +49,7 @@ function select(year: number | string): void {
       :class="
         String(year) === String(modelValue)
           ? 'border-cg-accent bg-cg-accent font-semibold text-cg-accent-ink'
-          : 'border-cg-border bg-cg-field text-cg-muted hover:border-cg-accent hover:bg-cg-selected'
+          : 'border-cg-border bg-cg-field text-cg-text hover:border-cg-accent hover:bg-cg-selected'
       "
       :aria-selected="String(year) === String(modelValue)"
       @click="select(year)"

@@ -54,13 +54,13 @@ function onSubmit(): void {
     <label :for="inputId" class="font-cg-sans text-sm text-cg-text">{{ label }}</label>
 
     <div
-      class="flex h-[47px] items-center gap-2.5 rounded-[5px] border border-cg-border bg-cg-field px-3.5 transition-colors focus-within:border-cg-accent"
+      class="flex h-[47px] items-center gap-2.5 rounded-[5px] border border-cg-border bg-cg-field px-3.5 transition-colors focus-within:border-cg-accent focus-within:ring-2 focus-within:ring-cg-accent/20"
     >
       <span class="font-cg-mono text-[15px] font-bold text-cg-accent" aria-hidden="true">@</span>
       <input
         :id="inputId"
         type="text"
-        class="h-full min-w-0 flex-1 border-0 bg-transparent p-0 font-cg-mono text-sm font-bold text-cg-text outline-none placeholder:text-cg-muted disabled:cursor-wait disabled:opacity-50"
+        class="cg-user-input h-full min-w-0 flex-1 border-0 bg-transparent p-0 font-cg-mono text-sm font-bold text-cg-text outline-none placeholder:text-cg-muted disabled:cursor-wait disabled:opacity-50"
         :value="modelValue"
         :placeholder="placeholder"
         :disabled="loading"

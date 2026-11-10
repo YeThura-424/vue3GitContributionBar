@@ -26,9 +26,6 @@ The same component rendered with each built-in palette:
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | [![Forest 3D contribution graph](docs/public/previews/forest.png)](docs/public/previews/forest.png) | [![Daylight 3D contribution graph](docs/public/previews/daylight.png)](docs/public/previews/daylight.png) | [![Midnight 3D contribution graph](docs/public/previews/midnight.png)](docs/public/previews/midnight.png) |
 
-Click a thumbnail for the full-size image. For interactive versions, run `npm run dev` and open
-[`/guide/previews`](http://localhost:5173/guide/previews). The demos use sample data and require no GitHub access.
-
 ## Features
 
 - 🧊 **Real 3D** — logarithmic height scale, soft shadows, per-palette scene colors, orbit
@@ -74,7 +71,7 @@ import 'vue-contribution-graph-3d/style.css'
 
 ## Documentation
 
-The documentation site is built with VitePress and styled with Tailwind CSS. Run it locally with:
+The documentation site is a Vue 3 app built with Vite, following the vue3-mobileNav docs design. Its components, live examples and reference pages live in `docs/`. Run it locally with:
 
 ```sh
 npm install
@@ -88,12 +85,14 @@ component code for you as you change the controls.
 
 | Script               | What it does                                   |
 | -------------------- | ---------------------------------------------- |
-| `npm run dev`        | VitePress docs site with hot reload.           |
+| `npm run dev`        | Vue documentation app with hot reload.         |
 | `npm run build`      | Build `dist/` (ES, CJS, `.d.ts`, `style.css`). |
 | `npm run typecheck`  | `vue-tsc --noEmit`.                            |
 | `npm test`           | Vitest suite.                                  |
 | `npm run docs:build` | Static documentation build.                    |
 | `npm run format`     | Prettier.                                      |
+
+The docs build is written to `docs/dist/`; the npm library build remains in `dist/`.
 
 ## Requirements
 

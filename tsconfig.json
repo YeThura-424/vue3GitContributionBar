@@ -5,7 +5,7 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["docs/.vitepress/theme/*"],
+      "@/*": ["docs/*"],
       "vue-contribution-graph-3d": ["src/index.ts"]
     },
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
@@ -21,17 +21,17 @@
     "useDefineForClassFields": true,
     "jsx": "preserve",
     "noEmit": true,
-    "types": ["node"]
+    "types": ["node", "vite/client"]
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "docs/.vitepress/config.mts",
-    "docs/.vitepress/theme/**/*.ts",
-    "docs/.vitepress/theme/**/*.vue",
     "vite.config.ts",
-    "vitest.config.ts"
+    "vitest.config.ts",
+    "docs/**/*.ts",
+    "docs/**/*.vue",
+    "vite.docs.config.ts"
   ],
   "exclude": ["node_modules", "dist", "docs/dist"]
 }
