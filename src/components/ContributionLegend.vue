@@ -39,10 +39,10 @@ const levels = Array.from({ length: LEVEL_COUNT }, (_, index) => index)
 <template>
   <div
     v-bind="cgAttrs"
-    class="flex items-center gap-[5px] font-cg-sans text-xs text-cg-muted"
+    class="flex items-center gap-2 py-2 font-cg-sans text-xs text-cg-muted"
     aria-label="Contribution intensity legend"
   >
-    <span v-if="showLabels" class="mr-[3px]">{{ lessLabel }}</span>
+    <span v-if="showLabels" class="mr-1">{{ lessLabel }}</span>
     <i
       v-for="level in levels"
       :key="level"
@@ -50,6 +50,6 @@ const levels = Array.from({ length: LEVEL_COUNT }, (_, index) => index)
       :class="levelClasses[level]"
       aria-hidden="true"
     />
-    <span v-if="showLabels" class="ml-[3px]">{{ moreLabel }}</span>
+    <span v-if="showLabels" class="ml-1">{{ moreLabel }}</span>
   </div>
 </template>
