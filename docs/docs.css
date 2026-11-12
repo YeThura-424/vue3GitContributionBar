@@ -273,8 +273,6 @@
 }
 
 .playground-stage__stats {
-  border-top: 1px solid var(--vp-c-divider);
-  border-bottom: 0;
   padding-top: 20px;
 }
 
