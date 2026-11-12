@@ -110,129 +110,138 @@ const snippets = [
     <h2 id="utilities-themes" tabindex="-1">Themes</h2>
     <CodeBlock :code="snippets[2].code" :title="snippets[2].lang" />
     <h2 id="utilities-constants" tabindex="-1">Constants</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Constant</th>
-          <th>Value</th>
-          <th>Meaning</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>WEEKS_PER_YEAR</code></td>
-          <td><code>53</code></td>
-          <td>Maximum week columns.</td>
-        </tr>
-        <tr>
-          <td><code>DAYS_PER_WEEK</code></td>
-          <td><code>7</code></td>
-          <td>Rows per column.</td>
-        </tr>
-        <tr>
-          <td><code>CELL_SIZE</code></td>
-          <td><code>0.9</code></td>
-          <td>Bar edge length in world units.</td>
-        </tr>
-        <tr>
-          <td><code>CELL_GAP</code></td>
-          <td><code>0.3</code></td>
-          <td>Space between bars.</td>
-        </tr>
-        <tr>
-          <td><code>CELL_STEP</code></td>
-          <td><code>1.2</code></td>
-          <td><code>CELL_SIZE + CELL_GAP</code>.</td>
-        </tr>
-        <tr>
-          <td><code>ZERO_HEIGHT</code></td>
-          <td><code>0.1</code></td>
-          <td>Height of an empty day.</td>
-        </tr>
-        <tr>
-          <td><code>MIN_BAR_HEIGHT</code></td>
-          <td><code>0.24</code></td>
-          <td>Height of the first contribution.</td>
-        </tr>
-        <tr>
-          <td><code>MAX_VISIBLE_HEIGHT</code></td>
-          <td><code>10.5</code></td>
-          <td>Height of the busiest day.</td>
-        </tr>
-        <tr>
-          <td><code>DEFAULT_GROW_DURATION</code></td>
-          <td><code>2400</code></td>
-          <td>Animation length in ms.</td>
-        </tr>
-        <tr>
-          <td><code>LOOP_DELAY</code></td>
-          <td><code>700</code></td>
-          <td>Pause between loops in ms.</td>
-        </tr>
-        <tr>
-          <td><code>LEVEL_COUNT</code></td>
-          <td><code>5</code></td>
-          <td>Number of intensity levels.</td>
-        </tr>
-        <tr>
-          <td><code>LEVEL_THRESHOLDS</code></td>
-          <td><code>[3, 7, 13]</code></td>
-          <td>Upper bounds of levels 1–3.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="utilities-constants" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Constant</th>
+            <th scope="col">Value</th>
+            <th scope="col">Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>WEEKS_PER_YEAR</code></td>
+            <td><code>53</code></td>
+            <td>Maximum week columns.</td>
+          </tr>
+          <tr>
+            <td><code>DAYS_PER_WEEK</code></td>
+            <td><code>7</code></td>
+            <td>Rows per column.</td>
+          </tr>
+          <tr>
+            <td><code>CELL_SIZE</code></td>
+            <td><code>0.9</code></td>
+            <td>Bar edge length in world units.</td>
+          </tr>
+          <tr>
+            <td><code>CELL_GAP</code></td>
+            <td><code>0.3</code></td>
+            <td>Space between bars.</td>
+          </tr>
+          <tr>
+            <td><code>CELL_STEP</code></td>
+            <td><code>1.2</code></td>
+            <td><code>CELL_SIZE + CELL_GAP</code>.</td>
+          </tr>
+          <tr>
+            <td><code>ZERO_HEIGHT</code></td>
+            <td><code>0.1</code></td>
+            <td>Height of an empty day.</td>
+          </tr>
+          <tr>
+            <td><code>MIN_BAR_HEIGHT</code></td>
+            <td><code>0.24</code></td>
+            <td>Height of the first contribution.</td>
+          </tr>
+          <tr>
+            <td><code>MAX_VISIBLE_HEIGHT</code></td>
+            <td><code>10.5</code></td>
+            <td>Height of the busiest day.</td>
+          </tr>
+          <tr>
+            <td><code>DEFAULT_GROW_DURATION</code></td>
+            <td><code>2400</code></td>
+            <td>Animation length in ms.</td>
+          </tr>
+          <tr>
+            <td><code>LOOP_DELAY</code></td>
+            <td><code>700</code></td>
+            <td>Pause between loops in ms.</td>
+          </tr>
+          <tr>
+            <td><code>LEVEL_COUNT</code></td>
+            <td><code>5</code></td>
+            <td>Number of intensity levels.</td>
+          </tr>
+          <tr>
+            <td><code>LEVEL_THRESHOLDS</code></td>
+            <td><code>[3, 7, 13]</code></td>
+            <td>Upper bounds of levels 1–3.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="utilities-three-js-classes" tabindex="-1">Three.js classes</h2>
     <p>Advanced use only — these are exported for people who want to host the scene themselves.</p>
     <CodeBlock :code="snippets[3].code" :title="snippets[3].lang" />
     <h3 id="utilities-new-contributionscene-container-options" tabindex="-1">
       <code>new ContributionScene(container, options?)</code>
     </h3>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Method</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>setData(days)</code></td>
-          <td>Replace the rendered year.</td>
-        </tr>
-        <tr>
-          <td><code>setPalette(name)</code> / <code>setTheme(theme)</code></td>
-          <td>Retint bars, scene, lights and labels.</td>
-        </tr>
-        <tr>
-          <td><code>setAnimation({ animate, loop, duration })</code></td>
-          <td>Update the grow animation.</td>
-        </tr>
-        <tr>
-          <td><code>setAxisLabels(visible)</code></td>
-          <td>Toggle the month/weekday sprites.</td>
-        </tr>
-        <tr>
-          <td><code>setGridFrame(visible)</code></td>
-          <td>Toggle the outline.</td>
-        </tr>
-        <tr>
-          <td><code>setPaused(paused)</code></td>
-          <td>Freeze interaction and looping while loading.</td>
-        </tr>
-        <tr>
-          <td><code>setHoverListener(fn)</code></td>
-          <td>Receive <code>{ day, level, x, y }</code> or <code>null</code>.</td>
-        </tr>
-        <tr>
-          <td><code>replay()</code> · <code>resetView()</code></td>
-          <td>Animation and camera.</td>
-        </tr>
-        <tr>
-          <td><code>dispose()</code></td>
-          <td>Release every GPU resource and listener.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="utilities-new-contributionscene-container-options"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>setData(days)</code></td>
+            <td>Replace the rendered year.</td>
+          </tr>
+          <tr>
+            <td><code>setPalette(name)</code> / <code>setTheme(theme)</code></td>
+            <td>Retint bars, scene, lights and labels.</td>
+          </tr>
+          <tr>
+            <td><code>setAnimation({ animate, loop, duration })</code></td>
+            <td>Update the grow animation.</td>
+          </tr>
+          <tr>
+            <td><code>setAxisLabels(visible)</code></td>
+            <td>Toggle the month/weekday sprites.</td>
+          </tr>
+          <tr>
+            <td><code>setGridFrame(visible)</code></td>
+            <td>Toggle the outline.</td>
+          </tr>
+          <tr>
+            <td><code>setPaused(paused)</code></td>
+            <td>Freeze interaction and looping while loading.</td>
+          </tr>
+          <tr>
+            <td><code>setHoverListener(fn)</code></td>
+            <td>Receive <code>{ day, level, x, y }</code> or <code>null</code>.</td>
+          </tr>
+          <tr>
+            <td><code>replay()</code> · <code>resetView()</code></td>
+            <td>Animation and camera.</td>
+          </tr>
+          <tr>
+            <td><code>dispose()</code></td>
+            <td>Release every GPU resource and listener.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h3 id="utilities-growthanimator" tabindex="-1"><code>GrowthAnimator</code></h3>
     <p>The time-based grow animation, deliberately free of Three.js so it can be unit tested:</p>
     <CodeBlock :code="snippets[4].code" :title="snippets[4].lang" />

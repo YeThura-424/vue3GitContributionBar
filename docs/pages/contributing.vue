@@ -28,48 +28,50 @@ const snippets = [
     <h2 id="contributing-getting-started" tabindex="-1">Getting started</h2>
     <CodeBlock :code="snippets[1].code" :title="snippets[1].lang" />
     <h2 id="contributing-scripts" tabindex="-1">Scripts</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Script</th>
-          <th>What it does</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>npm run dev</code></td>
-          <td>Documentation site with hot reload.</td>
-        </tr>
-        <tr>
-          <td><code>npm run build</code></td>
-          <td>Build <code>dist/</code> (ES, CJS, <code>.d.ts</code>, <code>style.css</code>).</td>
-        </tr>
-        <tr>
-          <td><code>npm run typecheck</code></td>
-          <td><code>vue-tsc --noEmit</code> over source, tests and theme.</td>
-        </tr>
-        <tr>
-          <td><code>npm test</code></td>
-          <td>Run the Vitest suite once.</td>
-        </tr>
-        <tr>
-          <td><code>npm run test:watch</code></td>
-          <td>Vitest in watch mode.</td>
-        </tr>
-        <tr>
-          <td><code>npm run docs:build</code></td>
-          <td>Static build of the documentation.</td>
-        </tr>
-        <tr>
-          <td><code>npm run format</code></td>
-          <td>Prettier, over everything.</td>
-        </tr>
-        <tr>
-          <td><code>npm run format:check</code></td>
-          <td>CI-friendly formatting check.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="contributing-scripts" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Script</th>
+            <th scope="col">What it does</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>npm run dev</code></td>
+            <td>Documentation site with hot reload.</td>
+          </tr>
+          <tr>
+            <td><code>npm run build</code></td>
+            <td>Build <code>dist/</code> (ES, CJS, <code>.d.ts</code>, <code>style.css</code>).</td>
+          </tr>
+          <tr>
+            <td><code>npm run typecheck</code></td>
+            <td><code>vue-tsc --noEmit</code> over source, tests and theme.</td>
+          </tr>
+          <tr>
+            <td><code>npm test</code></td>
+            <td>Run the Vitest suite once.</td>
+          </tr>
+          <tr>
+            <td><code>npm run test:watch</code></td>
+            <td>Vitest in watch mode.</td>
+          </tr>
+          <tr>
+            <td><code>npm run docs:build</code></td>
+            <td>Static build of the documentation.</td>
+          </tr>
+          <tr>
+            <td><code>npm run format</code></td>
+            <td>Prettier, over everything.</td>
+          </tr>
+          <tr>
+            <td><code>npm run format:check</code></td>
+            <td>CI-friendly formatting check.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       Run
       <code

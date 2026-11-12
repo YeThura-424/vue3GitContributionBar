@@ -67,32 +67,34 @@ const snippets = [
     </ul>
     <CodeBlock :code="snippets[0].code" :title="snippets[0].lang" />
     <h2 id="theming-palettes" tabindex="-1">Palettes</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Look</th>
-          <th>Default chrome</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>forest</code></td>
-          <td>Deep greens with a bright mint highlight.</td>
-          <td>dark</td>
-        </tr>
-        <tr>
-          <td><code>daylight</code></td>
-          <td>Soft sage greens on a warm off-white scene.</td>
-          <td>light</td>
-        </tr>
-        <tr>
-          <td><code>midnight</code></td>
-          <td>Violet ramp on a near-black blue scene.</td>
-          <td>dark</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="theming-palettes" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Look</th>
+            <th scope="col">Default chrome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>forest</code></td>
+            <td>Deep greens with a bright mint highlight.</td>
+            <td>dark</td>
+          </tr>
+          <tr>
+            <td><code>daylight</code></td>
+            <td>Soft sage greens on a warm off-white scene.</td>
+            <td>light</td>
+          </tr>
+          <tr>
+            <td><code>midnight</code></td>
+            <td>Violet ramp on a near-black blue scene.</td>
+            <td>dark</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class="cg-doc-card palette-demo">
       <div class="palette-demo__options">
         <button
@@ -142,68 +144,70 @@ const snippets = [
       <code>@layer components</code> block of overrides — and <strong>nothing else</strong>. No
       preflight, no base reset, no global element selectors.
     </p>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Token</th>
-          <th>Used for</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>--color-cg-page</code></td>
-          <td>Full page background (yours to use).</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-panel</code></td>
-          <td>Panel background (yours to use).</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-field</code></td>
-          <td>Input and tooltip background.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-selected</code></td>
-          <td>Selected year / palette background.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-border</code></td>
-          <td>Borders, dividers, the grid frame.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-text</code></td>
-          <td>Primary text.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-muted</code></td>
-          <td>Secondary text and legends.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-accent</code></td>
-          <td>Accent: buttons, stats, focus rings.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-accent-ink</code></td>
-          <td>Text on top of the accent color.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-error</code></td>
-          <td>Error text.</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-scene</code></td>
-          <td>WebGL scene background (and its placeholder).</td>
-        </tr>
-        <tr>
-          <td><code>--color-cg-level-0 … 4</code></td>
-          <td>The five intensity levels.</td>
-        </tr>
-        <tr>
-          <td><code>--font-cg-sans</code>, <code>--font-cg-mono</code></td>
-          <td>Component typography (<code>font-cg-sans</code>, <code>font-cg-mono</code>).</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="theming-the-token-layer" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Token</th>
+            <th scope="col">Used for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>--color-cg-page</code></td>
+            <td>Full page background (yours to use).</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-panel</code></td>
+            <td>Panel background (yours to use).</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-field</code></td>
+            <td>Input and tooltip background.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-selected</code></td>
+            <td>Selected year / palette background.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-border</code></td>
+            <td>Borders, dividers, the grid frame.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-text</code></td>
+            <td>Primary text.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-muted</code></td>
+            <td>Secondary text and legends.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-accent</code></td>
+            <td>Accent: buttons, stats, focus rings.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-accent-ink</code></td>
+            <td>Text on top of the accent color.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-error</code></td>
+            <td>Error text.</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-scene</code></td>
+            <td>WebGL scene background (and its placeholder).</td>
+          </tr>
+          <tr>
+            <td><code>--color-cg-level-0 … 4</code></td>
+            <td>The five intensity levels.</td>
+          </tr>
+          <tr>
+            <td><code>--font-cg-sans</code>, <code>--font-cg-mono</code></td>
+            <td>Component typography (<code>font-cg-sans</code>, <code>font-cg-mono</code>).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="theming-overriding-a-color" tabindex="-1">Overriding a color</h2>
     <p>
       Add your own override after the library stylesheet. Attribute selectors win over

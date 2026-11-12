@@ -38,48 +38,55 @@ const snippets = [
       <ContributionLegend :palette="palette" :theme="siteTheme" />
     </div>
     <h2 id="contribution-legend-props" tabindex="-1">Props</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Prop</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>palette</code></td>
-          <td><code>string</code></td>
-          <td><code>'forest'</code></td>
-          <td>Which ramp the swatches show.</td>
-        </tr>
-        <tr>
-          <td><code>theme</code></td>
-          <td><code>string</code></td>
-          <td><code>'auto'</code></td>
-          <td><code>dark</code>, <code>light</code> or palette-derived.</td>
-        </tr>
-        <tr>
-          <td><code>showLabels</code></td>
-          <td><code>boolean</code></td>
-          <td><code>true</code></td>
-          <td>Render the <code>Less</code> / <code>More</code> captions.</td>
-        </tr>
-        <tr>
-          <td><code>lessLabel</code></td>
-          <td><code>string</code></td>
-          <td><code>'Less'</code></td>
-          <td>Left caption — translate it here.</td>
-        </tr>
-        <tr>
-          <td><code>moreLabel</code></td>
-          <td><code>string</code></td>
-          <td><code>'More'</code></td>
-          <td>Right caption.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-legend-props"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Prop</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>palette</code></td>
+            <td><code>string</code></td>
+            <td><code>'forest'</code></td>
+            <td>Which ramp the swatches show.</td>
+          </tr>
+          <tr>
+            <td><code>theme</code></td>
+            <td><code>string</code></td>
+            <td><code>'auto'</code></td>
+            <td><code>dark</code>, <code>light</code> or palette-derived.</td>
+          </tr>
+          <tr>
+            <td><code>showLabels</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Render the <code>Less</code> / <code>More</code> captions.</td>
+          </tr>
+          <tr>
+            <td><code>lessLabel</code></td>
+            <td><code>string</code></td>
+            <td><code>'Less'</code></td>
+            <td>Left caption — translate it here.</td>
+          </tr>
+          <tr>
+            <td><code>moreLabel</code></td>
+            <td><code>string</code></td>
+            <td><code>'More'</code></td>
+            <td>Right caption.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-legend-slots" tabindex="-1">Slots</h2>
     <p>None. The captions are props so that localization needs no scoped slots.</p>
     <h2 id="contribution-legend-example" tabindex="-1">Example</h2>

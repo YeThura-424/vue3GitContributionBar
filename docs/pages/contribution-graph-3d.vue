@@ -55,102 +55,109 @@ const snippets = [
       </div>
     </div>
     <h2 id="contribution-graph-3d-props" tabindex="-1">Props</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Prop</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>data</code></td>
-          <td><code>readonly ContributionDay[] | null</code></td>
-          <td><code>null</code></td>
-          <td>Day grid to render. Wins over <code>username</code> when both are set.</td>
-        </tr>
-        <tr>
-          <td><code>username</code></td>
-          <td><code>string | null</code></td>
-          <td><code>null</code></td>
-          <td>GitHub handle; fetched through the community API.</td>
-        </tr>
-        <tr>
-          <td><code>year</code></td>
-          <td><code>number | string | null</code></td>
-          <td>current year</td>
-          <td>Year to display when <code>username</code> is used.</td>
-        </tr>
-        <tr>
-          <td><code>palette</code></td>
-          <td><code>'forest' | 'daylight' | 'midnight'</code></td>
-          <td><code>'forest'</code></td>
-          <td>Bar ramp, scene background and default chrome.</td>
-        </tr>
-        <tr>
-          <td><code>theme</code></td>
-          <td><code>'dark' | 'light' | 'auto'</code></td>
-          <td><code>'auto'</code></td>
-          <td>Chrome of the loading and empty states.</td>
-        </tr>
-        <tr>
-          <td><code>animate</code></td>
-          <td><code>boolean</code></td>
-          <td><code>true</code></td>
-          <td>Grow the bars instead of showing final heights.</td>
-        </tr>
-        <tr>
-          <td><code>loop</code></td>
-          <td><code>boolean</code></td>
-          <td><code>false</code></td>
-          <td>Restart the animation when it finishes.</td>
-        </tr>
-        <tr>
-          <td><code>duration</code></td>
-          <td><code>number</code></td>
-          <td><code>2400</code></td>
-          <td>Grow duration in milliseconds.</td>
-        </tr>
-        <tr>
-          <td><code>showAxisLabels</code></td>
-          <td><code>boolean</code></td>
-          <td><code>true</code></td>
-          <td>Render the month and weekday sprites.</td>
-        </tr>
-        <tr>
-          <td><code>showGridFrame</code></td>
-          <td><code>boolean</code></td>
-          <td><code>true</code></td>
-          <td>Draw the theme-colored flat outline between grid and labels.</td>
-        </tr>
-        <tr>
-          <td><code>showTooltip</code></td>
-          <td><code>boolean</code></td>
-          <td><code>true</code></td>
-          <td>Render the built-in hover tooltip.</td>
-        </tr>
-        <tr>
-          <td><code>loading</code></td>
-          <td><code>boolean</code></td>
-          <td><code>false</code></td>
-          <td>Force the loading overlay (OR-ed with the internal fetch state).</td>
-        </tr>
-        <tr>
-          <td><code>label</code></td>
-          <td><code>string</code></td>
-          <td><code>'Interactive 3D contribution graph'</code></td>
-          <td>Accessible name of the graph.</td>
-        </tr>
-        <tr>
-          <td><code>height</code></td>
-          <td><code>string</code></td>
-          <td><code>'clamp(360px, 48.3vh, 500px)'</code></td>
-          <td>Any CSS length, applied to the container.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-graph-3d-props"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Prop</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>data</code></td>
+            <td><code>readonly ContributionDay[] | null</code></td>
+            <td><code>null</code></td>
+            <td>Day grid to render. Wins over <code>username</code> when both are set.</td>
+          </tr>
+          <tr>
+            <td><code>username</code></td>
+            <td><code>string | null</code></td>
+            <td><code>null</code></td>
+            <td>GitHub handle; fetched through the community API.</td>
+          </tr>
+          <tr>
+            <td><code>year</code></td>
+            <td><code>number | string | null</code></td>
+            <td>current year</td>
+            <td>Year to display when <code>username</code> is used.</td>
+          </tr>
+          <tr>
+            <td><code>palette</code></td>
+            <td><code>'forest' | 'daylight' | 'midnight'</code></td>
+            <td><code>'forest'</code></td>
+            <td>Bar ramp, scene background and default chrome.</td>
+          </tr>
+          <tr>
+            <td><code>theme</code></td>
+            <td><code>'dark' | 'light' | 'auto'</code></td>
+            <td><code>'auto'</code></td>
+            <td>Chrome of the loading and empty states.</td>
+          </tr>
+          <tr>
+            <td><code>animate</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Grow the bars instead of showing final heights.</td>
+          </tr>
+          <tr>
+            <td><code>loop</code></td>
+            <td><code>boolean</code></td>
+            <td><code>false</code></td>
+            <td>Restart the animation when it finishes.</td>
+          </tr>
+          <tr>
+            <td><code>duration</code></td>
+            <td><code>number</code></td>
+            <td><code>2400</code></td>
+            <td>Grow duration in milliseconds.</td>
+          </tr>
+          <tr>
+            <td><code>showAxisLabels</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Render the month and weekday sprites.</td>
+          </tr>
+          <tr>
+            <td><code>showGridFrame</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Draw the theme-colored flat outline between grid and labels.</td>
+          </tr>
+          <tr>
+            <td><code>showTooltip</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Render the built-in hover tooltip.</td>
+          </tr>
+          <tr>
+            <td><code>loading</code></td>
+            <td><code>boolean</code></td>
+            <td><code>false</code></td>
+            <td>Force the loading overlay (OR-ed with the internal fetch state).</td>
+          </tr>
+          <tr>
+            <td><code>label</code></td>
+            <td><code>string</code></td>
+            <td><code>'Interactive 3D contribution graph'</code></td>
+            <td>Accessible name of the graph.</td>
+          </tr>
+          <tr>
+            <td><code>height</code></td>
+            <td><code>string</code></td>
+            <td><code>'clamp(360px, 48.3vh, 500px)'</code></td>
+            <td>Any CSS length, applied to the container.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       The root element also accepts a <code>class</code> and any other attribute (<code
         >v-bind=&quot;$attrs&quot;</code
@@ -159,131 +166,152 @@ const snippets = [
       <code>id=&quot;graph&quot;</code> work as expected.
     </p>
     <h2 id="contribution-graph-3d-events" tabindex="-1">Events</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Payload</th>
-          <th>Fired when</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>ready</code></td>
-          <td>—</td>
-          <td>The Three.js scene is mounted.</td>
-        </tr>
-        <tr>
-          <td><code>loaded</code></td>
-          <td><code>days: ContributionDay[]</code></td>
-          <td>New data was handed to the scene.</td>
-        </tr>
-        <tr>
-          <td><code>hover</code></td>
-          <td><code>ContributionHover | null</code></td>
-          <td>The pointer enters a bar, moves, or leaves.</td>
-        </tr>
-        <tr>
-          <td><code>error</code></td>
-          <td><code>message: string</code></td>
-          <td>Fetching failed or WebGL could not be created.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-graph-3d-events"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Payload</th>
+            <th scope="col">Fired when</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>ready</code></td>
+            <td>—</td>
+            <td>The Three.js scene is mounted.</td>
+          </tr>
+          <tr>
+            <td><code>loaded</code></td>
+            <td><code>days: ContributionDay[]</code></td>
+            <td>New data was handed to the scene.</td>
+          </tr>
+          <tr>
+            <td><code>hover</code></td>
+            <td><code>ContributionHover | null</code></td>
+            <td>The pointer enters a bar, moves, or leaves.</td>
+          </tr>
+          <tr>
+            <td><code>error</code></td>
+            <td><code>message: string</code></td>
+            <td>Fetching failed or WebGL could not be created.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <CodeBlock :code="snippets[0].code" :title="snippets[0].lang" />
     <h2 id="contribution-graph-3d-slots" tabindex="-1">Slots</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Slot</th>
-          <th>Props</th>
-          <th>Fallback</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>loading</code></td>
-          <td>—</td>
-          <td>Spinner plus <em>Loading contributions…</em></td>
-        </tr>
-        <tr>
-          <td><code>empty</code></td>
-          <td>—</td>
-          <td>Hint telling you to pass <code>username</code> or <code>data</code></td>
-        </tr>
-        <tr>
-          <td>default</td>
-          <td>—</td>
-          <td>Rendered above the canvas, below the tooltip</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-graph-3d-slots"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Slot</th>
+            <th scope="col">Props</th>
+            <th scope="col">Fallback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>loading</code></td>
+            <td>—</td>
+            <td>Spinner plus <em>Loading contributions…</em></td>
+          </tr>
+          <tr>
+            <td><code>empty</code></td>
+            <td>—</td>
+            <td>Hint telling you to pass <code>username</code> or <code>data</code></td>
+          </tr>
+          <tr>
+            <td>default</td>
+            <td>—</td>
+            <td>Rendered above the canvas, below the tooltip</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-graph-3d-exposed" tabindex="-1">Exposed</h2>
     <p>Access through a template ref:</p>
     <CodeBlock :code="snippets[1].code" :title="snippets[1].lang" />
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Member</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>ready</code></td>
-          <td><code>Ref&lt;boolean&gt;</code></td>
-          <td>Whether the scene exists.</td>
-        </tr>
-        <tr>
-          <td><code>years</code></td>
-          <td><code>Ref&lt;string[]&gt;</code></td>
-          <td>Years returned by the API, newest first.</td>
-        </tr>
-        <tr>
-          <td><code>year</code></td>
-          <td><code>Ref&lt;string&gt;</code></td>
-          <td>Active year.</td>
-        </tr>
-        <tr>
-          <td><code>setYear</code></td>
-          <td><code>(year: string | number) =&gt; void</code></td>
-          <td>Switch year.</td>
-        </tr>
-        <tr>
-          <td><code>load</code></td>
-          <td><code>(username?: string) =&gt; Promise&lt;void&gt;</code></td>
-          <td>Fetch a profile.</td>
-        </tr>
-        <tr>
-          <td><code>reload</code></td>
-          <td><code>() =&gt; void</code></td>
-          <td>Re-fetch the current profile.</td>
-        </tr>
-        <tr>
-          <td><code>status</code></td>
-          <td><code>Ref&lt;ContributionStatus&gt;</code></td>
-          <td>
-            <code>idle</code>, <code>loading</code>, <code>success</code>, <code>error</code>.
-          </td>
-        </tr>
-        <tr>
-          <td><code>error</code></td>
-          <td><code>Ref&lt;string | null&gt;</code></td>
-          <td>Failure message.</td>
-        </tr>
-        <tr>
-          <td><code>replay</code></td>
-          <td><code>() =&gt; void</code></td>
-          <td>Restart the grow animation.</td>
-        </tr>
-        <tr>
-          <td><code>resetView</code></td>
-          <td><code>() =&gt; void</code></td>
-          <td>Return the camera to its default framing.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-graph-3d-exposed"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Member</th>
+            <th scope="col">Type</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>ready</code></td>
+            <td><code>Ref&lt;boolean&gt;</code></td>
+            <td>Whether the scene exists.</td>
+          </tr>
+          <tr>
+            <td><code>years</code></td>
+            <td><code>Ref&lt;string[]&gt;</code></td>
+            <td>Years returned by the API, newest first.</td>
+          </tr>
+          <tr>
+            <td><code>year</code></td>
+            <td><code>Ref&lt;string&gt;</code></td>
+            <td>Active year.</td>
+          </tr>
+          <tr>
+            <td><code>setYear</code></td>
+            <td><code>(year: string | number) =&gt; void</code></td>
+            <td>Switch year.</td>
+          </tr>
+          <tr>
+            <td><code>load</code></td>
+            <td><code>(username?: string) =&gt; Promise&lt;void&gt;</code></td>
+            <td>Fetch a profile.</td>
+          </tr>
+          <tr>
+            <td><code>reload</code></td>
+            <td><code>() =&gt; void</code></td>
+            <td>Re-fetch the current profile.</td>
+          </tr>
+          <tr>
+            <td><code>status</code></td>
+            <td><code>Ref&lt;ContributionStatus&gt;</code></td>
+            <td>
+              <code>idle</code>, <code>loading</code>, <code>success</code>, <code>error</code>.
+            </td>
+          </tr>
+          <tr>
+            <td><code>error</code></td>
+            <td><code>Ref&lt;string | null&gt;</code></td>
+            <td>Failure message.</td>
+          </tr>
+          <tr>
+            <td><code>replay</code></td>
+            <td><code>() =&gt; void</code></td>
+            <td>Restart the grow animation.</td>
+          </tr>
+          <tr>
+            <td><code>resetView</code></td>
+            <td><code>() =&gt; void</code></td>
+            <td>Return the camera to its default framing.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-graph-3d-loading-a-profile" tabindex="-1">Loading a profile</h2>
     <CodeBlock :code="snippets[2].code" :title="snippets[2].lang" />
     <h2 id="contribution-graph-3d-rendering-without-webgl" tabindex="-1">

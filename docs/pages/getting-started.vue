@@ -73,69 +73,76 @@ const snippets = [
       exposes them through a template ref:
     </p>
     <CodeBlock :code="snippets[2].code" :title="snippets[2].lang" />
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Exposed</th>
-          <th>Type</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>years</code></td>
-          <td><code>Ref&lt;string[]&gt;</code></td>
-          <td>Available years, newest first.</td>
-        </tr>
-        <tr>
-          <td><code>year</code></td>
-          <td><code>Ref&lt;string&gt;</code></td>
-          <td>The year currently rendered.</td>
-        </tr>
-        <tr>
-          <td><code>setYear(year)</code></td>
-          <td><code>(year: string | number) =&gt; void</code></td>
-          <td>Switch the grid to another year.</td>
-        </tr>
-        <tr>
-          <td><code>load(username)</code></td>
-          <td><code>Promise&lt;void&gt;</code></td>
-          <td>Fetch another profile.</td>
-        </tr>
-        <tr>
-          <td><code>reload()</code></td>
-          <td><code>() =&gt; void</code></td>
-          <td>Re-fetch the current profile.</td>
-        </tr>
-        <tr>
-          <td><code>status</code></td>
-          <td><code>Ref&lt;ContributionStatus&gt;</code></td>
-          <td>
-            <code>idle</code>, <code>loading</code>, <code>success</code> or <code>error</code>.
-          </td>
-        </tr>
-        <tr>
-          <td><code>error</code></td>
-          <td><code>Ref&lt;string | null&gt;</code></td>
-          <td>Human readable failure message.</td>
-        </tr>
-        <tr>
-          <td><code>replay()</code></td>
-          <td><code>() =&gt; void</code></td>
-          <td>Restart the grow animation.</td>
-        </tr>
-        <tr>
-          <td><code>resetView()</code></td>
-          <td><code>() =&gt; void</code></td>
-          <td>Move the camera back to the default framing.</td>
-        </tr>
-        <tr>
-          <td><code>ready</code></td>
-          <td><code>Ref&lt;boolean&gt;</code></td>
-          <td>The WebGL scene exists.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="getting-started-load-a-real-profile"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Exposed</th>
+            <th scope="col">Type</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>years</code></td>
+            <td><code>Ref&lt;string[]&gt;</code></td>
+            <td>Available years, newest first.</td>
+          </tr>
+          <tr>
+            <td><code>year</code></td>
+            <td><code>Ref&lt;string&gt;</code></td>
+            <td>The year currently rendered.</td>
+          </tr>
+          <tr>
+            <td><code>setYear(year)</code></td>
+            <td><code>(year: string | number) =&gt; void</code></td>
+            <td>Switch the grid to another year.</td>
+          </tr>
+          <tr>
+            <td><code>load(username)</code></td>
+            <td><code>Promise&lt;void&gt;</code></td>
+            <td>Fetch another profile.</td>
+          </tr>
+          <tr>
+            <td><code>reload()</code></td>
+            <td><code>() =&gt; void</code></td>
+            <td>Re-fetch the current profile.</td>
+          </tr>
+          <tr>
+            <td><code>status</code></td>
+            <td><code>Ref&lt;ContributionStatus&gt;</code></td>
+            <td>
+              <code>idle</code>, <code>loading</code>, <code>success</code> or <code>error</code>.
+            </td>
+          </tr>
+          <tr>
+            <td><code>error</code></td>
+            <td><code>Ref&lt;string | null&gt;</code></td>
+            <td>Human readable failure message.</td>
+          </tr>
+          <tr>
+            <td><code>replay()</code></td>
+            <td><code>() =&gt; void</code></td>
+            <td>Restart the grow animation.</td>
+          </tr>
+          <tr>
+            <td><code>resetView()</code></td>
+            <td><code>() =&gt; void</code></td>
+            <td>Move the camera back to the default framing.</td>
+          </tr>
+          <tr>
+            <td><code>ready</code></td>
+            <td><code>Ref&lt;boolean&gt;</code></td>
+            <td>The WebGL scene exists.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="getting-started-a-complete-dashboard" tabindex="-1">A complete dashboard</h2>
     <p>Everything below is real, running code:</p>
     <div class="cg-doc-card">
@@ -206,32 +213,34 @@ const snippets = [
     <h2 id="getting-started-events" tabindex="-1">Events</h2>
     <CodeBlock :code="snippets[4].code" :title="snippets[4].lang" />
     <h2 id="getting-started-controls" tabindex="-1">Controls</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Input</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Drag</td>
-          <td>Orbit around the grid.</td>
-        </tr>
-        <tr>
-          <td>Scroll / pinch</td>
-          <td>Zoom in and out.</td>
-        </tr>
-        <tr>
-          <td>Hover a bar</td>
-          <td>Highlight it and show the tooltip.</td>
-        </tr>
-        <tr>
-          <td>Right-drag</td>
-          <td>Pan the camera target.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="getting-started-controls" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Input</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drag</td>
+            <td>Orbit around the grid.</td>
+          </tr>
+          <tr>
+            <td>Scroll / pinch</td>
+            <td>Zoom in and out.</td>
+          </tr>
+          <tr>
+            <td>Hover a bar</td>
+            <td>Highlight it and show the tooltip.</td>
+          </tr>
+          <tr>
+            <td>Right-drag</td>
+            <td>Pan the camera target.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       Keyboard users can tab past the graph to the surrounding controls; the canvas itself is marked
       <code>aria-hidden</code> because the month and weekday labels are exposed as screen-reader

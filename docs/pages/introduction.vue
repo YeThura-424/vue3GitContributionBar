@@ -38,48 +38,55 @@ const snippets = [
       around it.
     </p>
     <h2 id="introduction-what-you-get" tabindex="-1">What you get</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Component</th>
-          <th>Purpose</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>&lt;ContributionGraph3D /&gt;</code></td>
-          <td>The WebGL scene: bars, camera, hover, grow animation.</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ContributionToolbar /&gt;</code></td>
-          <td>Status pill plus <em>Replay animation</em> and <em>Reset view</em> buttons.</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ContributionLegend /&gt;</code></td>
-          <td>Less → More intensity swatches.</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ContributionStats /&gt;</code></td>
-          <td>Total, active days, longest streak and best day.</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ContributionYearTabs /&gt;</code></td>
-          <td>Switch between the years returned by the API.</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ContributionPalettePicker /&gt;</code></td>
-          <td>Pick between forest, daylight and midnight.</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ContributionUserForm /&gt;</code></td>
-          <td>A labelled <code>@username</code> input with a submit button.</td>
-        </tr>
-        <tr>
-          <td><code>&lt;ContributionTooltip /&gt;</code></td>
-          <td>The hover card, or anything else you put in its slot.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="introduction-what-you-get"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Component</th>
+            <th scope="col">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;ContributionGraph3D /&gt;</code></td>
+            <td>The WebGL scene: bars, camera, hover, grow animation.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ContributionToolbar /&gt;</code></td>
+            <td>Status pill plus <em>Replay animation</em> and <em>Reset view</em> buttons.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ContributionLegend /&gt;</code></td>
+            <td>Less → More intensity swatches.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ContributionStats /&gt;</code></td>
+            <td>Total, active days, longest streak and best day.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ContributionYearTabs /&gt;</code></td>
+            <td>Switch between the years returned by the API.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ContributionPalettePicker /&gt;</code></td>
+            <td>Pick between forest, daylight and midnight.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ContributionUserForm /&gt;</code></td>
+            <td>A labelled <code>@username</code> input with a submit button.</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ContributionTooltip /&gt;</code></td>
+            <td>The hover card, or anything else you put in its slot.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       Alongside the components you get four composables — <code>useGitHubContributions</code>,
       <code>useContributionStats</code>, <code>useSampleContributions</code> and

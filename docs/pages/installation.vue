@@ -34,32 +34,39 @@ const snippets = [
   <div class="reference-content">
     <h2 class="page-title">Installation</h2>
     <h2 id="installation-requirements" tabindex="-1">Requirements</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Package</th>
-          <th>Version</th>
-          <th>Note</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>vue</code></td>
-          <td><code>^3.4.0</code></td>
-          <td>Peer dependency, must be installed.</td>
-        </tr>
-        <tr>
-          <td><code>three</code></td>
-          <td><code>&gt;=0.160.0</code></td>
-          <td>Peer dependency, must be installed.</td>
-        </tr>
-        <tr>
-          <td><code>tailwindcss</code></td>
-          <td>optional</td>
-          <td>Only needed if you restyle the tokens.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="installation-requirements"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Package</th>
+            <th scope="col">Version</th>
+            <th scope="col">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>vue</code></td>
+            <td><code>^3.4.0</code></td>
+            <td>Peer dependency, must be installed.</td>
+          </tr>
+          <tr>
+            <td><code>three</code></td>
+            <td><code>&gt;=0.160.0</code></td>
+            <td>Peer dependency, must be installed.</td>
+          </tr>
+          <tr>
+            <td><code>tailwindcss</code></td>
+            <td>optional</td>
+            <td>Only needed if you restyle the tokens.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       <code>vue-contribution-graph-3d</code> does <strong>not</strong> bundle <code>vue</code> or
       <code>three</code>, so your app keeps a single copy of both.

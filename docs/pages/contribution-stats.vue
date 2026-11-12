@@ -29,42 +29,44 @@ const snippets = [
       <ContributionStats :stats="stats" :theme="siteTheme" />
     </div>
     <h2 id="contribution-stats-props" tabindex="-1">Props</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Prop</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>data</code></td>
-          <td><code>readonly ContributionDay[] | null</code></td>
-          <td><code>null</code></td>
-          <td>Aggregated on the fly. Ignored when <code>stats</code> is set.</td>
-        </tr>
-        <tr>
-          <td><code>stats</code></td>
-          <td><code>ContributionStats | null</code></td>
-          <td><code>null</code></td>
-          <td>Pre-computed numbers, e.g. from <code>useContributionStats</code>.</td>
-        </tr>
-        <tr>
-          <td><code>palette</code></td>
-          <td><code>string</code></td>
-          <td><code>'forest'</code></td>
-          <td>Accent color source.</td>
-        </tr>
-        <tr>
-          <td><code>theme</code></td>
-          <td><code>string</code></td>
-          <td><code>'auto'</code></td>
-          <td>Light or dark chrome.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="contribution-stats-props" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Prop</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>data</code></td>
+            <td><code>readonly ContributionDay[] | null</code></td>
+            <td><code>null</code></td>
+            <td>Aggregated on the fly. Ignored when <code>stats</code> is set.</td>
+          </tr>
+          <tr>
+            <td><code>stats</code></td>
+            <td><code>ContributionStats | null</code></td>
+            <td><code>null</code></td>
+            <td>Pre-computed numbers, e.g. from <code>useContributionStats</code>.</td>
+          </tr>
+          <tr>
+            <td><code>palette</code></td>
+            <td><code>string</code></td>
+            <td><code>'forest'</code></td>
+            <td>Accent color source.</td>
+          </tr>
+          <tr>
+            <td><code>theme</code></td>
+            <td><code>string</code></td>
+            <td><code>'auto'</code></td>
+            <td>Light or dark chrome.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-stats-the-stats-object" tabindex="-1">The stats object</h2>
     <CodeBlock :code="snippets[0].code" :title="snippets[0].lang" />
     <p>

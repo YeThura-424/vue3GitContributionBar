@@ -35,8 +35,18 @@ const resolved = computed<Stats>(() => {
 })
 
 const cells = computed(() => [
-  { label: 'Total contributions', value: resolved.value.total.toLocaleString(), suffix: '', detail: '' },
-  { label: 'Active days', value: resolved.value.activeDays.toLocaleString(), suffix: '', detail: '' },
+  {
+    label: 'Total contributions',
+    value: resolved.value.total.toLocaleString(),
+    suffix: '',
+    detail: '',
+  },
+  {
+    label: 'Active days',
+    value: resolved.value.activeDays.toLocaleString(),
+    suffix: '',
+    detail: '',
+  },
   {
     label: 'Longest streak',
     value: resolved.value.longestStreak.toLocaleString(),
@@ -62,7 +72,7 @@ const cellClasses = [
 <template>
   <div
     v-bind="cgAttrs"
-    class="grid grid-cols-2 gap-y-6 border-y border-cg-border py-6 sm:grid-cols-4 sm:gap-y-0"
+    class="grid grid-cols-2 gap-y-6 py-6 sm:grid-cols-4 sm:gap-y-0"
     aria-label="Contribution summary"
   >
     <div
@@ -77,7 +87,8 @@ const cellClasses = [
         {{ cell.label }}
       </span>
       <strong class="font-cg-mono text-[27px] leading-none text-cg-accent sm:text-[34px]">
-        {{ cell.value }}<span v-if="cell.suffix" class="ml-1 text-[0.45em]">{{ ` ${cell.suffix}` }}</span>
+        {{ cell.value
+        }}<span v-if="cell.suffix" class="ml-1 text-[0.45em]">{{ ` ${cell.suffix}` }}</span>
       </strong>
       <span class="sr-only">{{ cell.detail }}</span>
     </div>

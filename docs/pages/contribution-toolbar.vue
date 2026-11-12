@@ -46,95 +46,116 @@ const snippets = [
       <p class="mt-3 font-mono text-xs text-(--vp-c-text-2)">last event: {{ lastAction }}</p>
     </div>
     <h2 id="contribution-toolbar-props" tabindex="-1">Props</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Prop</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>badge</code></td>
-          <td><code>string</code></td>
-          <td><code>'Sample activity'</code></td>
-          <td>Text inside the status pill.</td>
-        </tr>
-        <tr>
-          <td><code>replayLabel</code></td>
-          <td><code>string</code></td>
-          <td><code>'Replay animation'</code></td>
-          <td>Label of the first button.</td>
-        </tr>
-        <tr>
-          <td><code>resetLabel</code></td>
-          <td><code>string</code></td>
-          <td><code>'Reset view'</code></td>
-          <td>Label of the second button.</td>
-        </tr>
-        <tr>
-          <td><code>disabled</code></td>
-          <td><code>boolean</code></td>
-          <td><code>false</code></td>
-          <td>Disables both buttons (use while loading).</td>
-        </tr>
-        <tr>
-          <td><code>palette</code></td>
-          <td><code>string</code></td>
-          <td><code>'forest'</code></td>
-          <td>Sets <code>data-cg-palette</code> for token overrides.</td>
-        </tr>
-        <tr>
-          <td><code>theme</code></td>
-          <td><code>string</code></td>
-          <td><code>'auto'</code></td>
-          <td>Sets <code>data-cg-theme</code>.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-toolbar-props"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Prop</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>badge</code></td>
+            <td><code>string</code></td>
+            <td><code>'Sample activity'</code></td>
+            <td>Text inside the status pill.</td>
+          </tr>
+          <tr>
+            <td><code>replayLabel</code></td>
+            <td><code>string</code></td>
+            <td><code>'Replay animation'</code></td>
+            <td>Label of the first button.</td>
+          </tr>
+          <tr>
+            <td><code>resetLabel</code></td>
+            <td><code>string</code></td>
+            <td><code>'Reset view'</code></td>
+            <td>Label of the second button.</td>
+          </tr>
+          <tr>
+            <td><code>disabled</code></td>
+            <td><code>boolean</code></td>
+            <td><code>false</code></td>
+            <td>Disables both buttons (use while loading).</td>
+          </tr>
+          <tr>
+            <td><code>palette</code></td>
+            <td><code>string</code></td>
+            <td><code>'forest'</code></td>
+            <td>Sets <code>data-cg-palette</code> for token overrides.</td>
+          </tr>
+          <tr>
+            <td><code>theme</code></td>
+            <td><code>string</code></td>
+            <td><code>'auto'</code></td>
+            <td>Sets <code>data-cg-theme</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-toolbar-events" tabindex="-1">Events</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Payload</th>
-          <th>Emitted when</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>replay</code></td>
-          <td>—</td>
-          <td>The first button is pressed.</td>
-        </tr>
-        <tr>
-          <td><code>reset</code></td>
-          <td>—</td>
-          <td>The second button is pressed.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-toolbar-events"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Payload</th>
+            <th scope="col">Emitted when</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>replay</code></td>
+            <td>—</td>
+            <td>The first button is pressed.</td>
+          </tr>
+          <tr>
+            <td><code>reset</code></td>
+            <td>—</td>
+            <td>The second button is pressed.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-toolbar-slots" tabindex="-1">Slots</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Slot</th>
-          <th>Fallback</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>badge</code></td>
-          <td>The <code>badge</code> prop text.</td>
-        </tr>
-        <tr>
-          <td>default</td>
-          <td>Rendered between the pill and the buttons.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-toolbar-slots"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Slot</th>
+            <th scope="col">Fallback</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>badge</code></td>
+            <td>The <code>badge</code> prop text.</td>
+          </tr>
+          <tr>
+            <td>default</td>
+            <td>Rendered between the pill and the buttons.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       The default slot is where extra controls belong — a year tab list, a palette picker, a switch:
     </p>
