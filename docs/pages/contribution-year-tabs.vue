@@ -40,63 +40,77 @@ const snippets = [
       </p>
     </div>
     <h2 id="contribution-year-tabs-props" tabindex="-1">Props</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Prop</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>modelValue</code></td>
-          <td><code>number | string</code></td>
-          <td>required</td>
-          <td>The selected year.</td>
-        </tr>
-        <tr>
-          <td><code>years</code></td>
-          <td><code>Array&lt;number | string&gt;</code></td>
-          <td>required</td>
-          <td>Years to render, in the order you pass them.</td>
-        </tr>
-        <tr>
-          <td><code>label</code></td>
-          <td><code>string</code></td>
-          <td><code>'Contribution years'</code></td>
-          <td>Accessible name of the tab list.</td>
-        </tr>
-        <tr>
-          <td><code>palette</code></td>
-          <td><code>string</code></td>
-          <td><code>'forest'</code></td>
-          <td>Sets <code>data-cg-palette</code>.</td>
-        </tr>
-        <tr>
-          <td><code>theme</code></td>
-          <td><code>string</code></td>
-          <td><code>'auto'</code></td>
-          <td>Sets <code>data-cg-theme</code>.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-year-tabs-props"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Prop</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>modelValue</code></td>
+            <td><code>number | string</code></td>
+            <td>required</td>
+            <td>The selected year.</td>
+          </tr>
+          <tr>
+            <td><code>years</code></td>
+            <td><code>Array&lt;number | string&gt;</code></td>
+            <td>required</td>
+            <td>Years to render, in the order you pass them.</td>
+          </tr>
+          <tr>
+            <td><code>label</code></td>
+            <td><code>string</code></td>
+            <td><code>'Contribution years'</code></td>
+            <td>Accessible name of the tab list.</td>
+          </tr>
+          <tr>
+            <td><code>palette</code></td>
+            <td><code>string</code></td>
+            <td><code>'forest'</code></td>
+            <td>Sets <code>data-cg-palette</code>.</td>
+          </tr>
+          <tr>
+            <td><code>theme</code></td>
+            <td><code>string</code></td>
+            <td><code>'auto'</code></td>
+            <td>Sets <code>data-cg-theme</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-year-tabs-events" tabindex="-1">Events</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Payload</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>update:modelValue</code></td>
-          <td><code>year: number | string</code></td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-year-tabs-events"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Payload</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>update:modelValue</code></td>
+            <td><code>year: number | string</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>Clicking the already selected year emits nothing.</p>
     <h2 id="contribution-year-tabs-example" tabindex="-1">Example</h2>
     <CodeBlock :code="snippets[0].code" :title="snippets[0].lang" />

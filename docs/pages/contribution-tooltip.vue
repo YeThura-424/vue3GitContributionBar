@@ -58,60 +58,67 @@ const snippets = [
       />
     </div>
     <h2 id="contribution-tooltip-props" tabindex="-1">Props</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Prop</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>count</code></td>
-          <td><code>number</code></td>
-          <td>required</td>
-          <td>Number of contributions.</td>
-        </tr>
-        <tr>
-          <td><code>dateKey</code></td>
-          <td><code>string</code></td>
-          <td><code>''</code></td>
-          <td><code>YYYY-MM-DD</code>, formatted with <code>Intl.DateTimeFormat</code>.</td>
-        </tr>
-        <tr>
-          <td><code>x</code></td>
-          <td><code>number</code></td>
-          <td><code>0</code></td>
-          <td>Horizontal position in CSS pixels.</td>
-        </tr>
-        <tr>
-          <td><code>y</code></td>
-          <td><code>number</code></td>
-          <td><code>0</code></td>
-          <td>Vertical position in CSS pixels.</td>
-        </tr>
-        <tr>
-          <td><code>locale</code></td>
-          <td><code>string</code></td>
-          <td><code>'en'</code></td>
-          <td>BCP 47 locale used for the date.</td>
-        </tr>
-        <tr>
-          <td><code>palette</code></td>
-          <td><code>string</code></td>
-          <td><code>'forest'</code></td>
-          <td>Sets <code>data-cg-palette</code>.</td>
-        </tr>
-        <tr>
-          <td><code>theme</code></td>
-          <td><code>string</code></td>
-          <td><code>'auto'</code></td>
-          <td>Light or dark chrome.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-tooltip-props"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Prop</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>count</code></td>
+            <td><code>number</code></td>
+            <td>required</td>
+            <td>Number of contributions.</td>
+          </tr>
+          <tr>
+            <td><code>dateKey</code></td>
+            <td><code>string</code></td>
+            <td><code>''</code></td>
+            <td><code>YYYY-MM-DD</code>, formatted with <code>Intl.DateTimeFormat</code>.</td>
+          </tr>
+          <tr>
+            <td><code>x</code></td>
+            <td><code>number</code></td>
+            <td><code>0</code></td>
+            <td>Horizontal position in CSS pixels.</td>
+          </tr>
+          <tr>
+            <td><code>y</code></td>
+            <td><code>number</code></td>
+            <td><code>0</code></td>
+            <td>Vertical position in CSS pixels.</td>
+          </tr>
+          <tr>
+            <td><code>locale</code></td>
+            <td><code>string</code></td>
+            <td><code>'en'</code></td>
+            <td>BCP 47 locale used for the date.</td>
+          </tr>
+          <tr>
+            <td><code>palette</code></td>
+            <td><code>string</code></td>
+            <td><code>'forest'</code></td>
+            <td>Sets <code>data-cg-palette</code>.</td>
+          </tr>
+          <tr>
+            <td><code>theme</code></td>
+            <td><code>string</code></td>
+            <td><code>'auto'</code></td>
+            <td>Light or dark chrome.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       The card is positioned with <code>translate(14px, 14px)</code> so it never sits under the
       pointer, and it is <code>pointer-events-none</code>, so it can never steal the hover from the
@@ -120,28 +127,35 @@ const snippets = [
     <h2 id="contribution-tooltip-slots" tabindex="-1">Slots</h2>
     <p>The default slot receives the formatted values:</p>
     <CodeBlock :code="snippets[0].code" :title="snippets[0].lang" />
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Slot prop</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>count</code></td>
-          <td>Ready-to-read label, e.g. <code>7 contributions</code>.</td>
-        </tr>
-        <tr>
-          <td><code>date</code></td>
-          <td>Formatted date, or <code>''</code> without <code>dateKey</code>.</td>
-        </tr>
-        <tr>
-          <td><code>rawCount</code></td>
-          <td>The raw <code>count</code> number.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-tooltip-slots"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Slot prop</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>count</code></td>
+            <td>Ready-to-read label, e.g. <code>7 contributions</code>.</td>
+          </tr>
+          <tr>
+            <td><code>date</code></td>
+            <td>Formatted date, or <code>''</code> without <code>dateKey</code>.</td>
+          </tr>
+          <tr>
+            <td><code>rawCount</code></td>
+            <td>The raw <code>count</code> number.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-tooltip-events" tabindex="-1">Events</h2>
     <p>
       None. The tooltip is presentational; the graph emits <code>hover</code> with the same

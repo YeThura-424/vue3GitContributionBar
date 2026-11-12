@@ -56,42 +56,44 @@ const snippets = [
     </p>
     <CodeBlock :code="snippets[2].code" :title="snippets[2].lang" />
     <h3 id="data-options" tabindex="-1">Options</h3>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Option</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>username</code></td>
-          <td><code>MaybeRefOrGetter</code></td>
-          <td><code>''</code></td>
-          <td>Reactive handle; <code>@</code> is stripped automatically.</td>
-        </tr>
-        <tr>
-          <td><code>year</code></td>
-          <td><code>MaybeRefOrGetter</code></td>
-          <td>current</td>
-          <td>Reactive year to display.</td>
-        </tr>
-        <tr>
-          <td><code>autoLoad</code></td>
-          <td><code>boolean</code></td>
-          <td><code>true</code></td>
-          <td>Fetch on creation and whenever the handle changes.</td>
-        </tr>
-        <tr>
-          <td><code>fetchFn</code></td>
-          <td><code>typeof fetch</code></td>
-          <td>global</td>
-          <td>Inject your own <code>fetch</code> (tests, proxies, mocks).</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="data-options" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Option</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>username</code></td>
+            <td><code>MaybeRefOrGetter</code></td>
+            <td><code>''</code></td>
+            <td>Reactive handle; <code>@</code> is stripped automatically.</td>
+          </tr>
+          <tr>
+            <td><code>year</code></td>
+            <td><code>MaybeRefOrGetter</code></td>
+            <td>current</td>
+            <td>Reactive year to display.</td>
+          </tr>
+          <tr>
+            <td><code>autoLoad</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Fetch on creation and whenever the handle changes.</td>
+          </tr>
+          <tr>
+            <td><code>fetchFn</code></td>
+            <td><code>typeof fetch</code></td>
+            <td>global</td>
+            <td>Inject your own <code>fetch</code> (tests, proxies, mocks).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       If the requested year does not exist for that user, the newest available year is selected
       automatically. Stale responses are discarded, so typing quickly through a search box can never

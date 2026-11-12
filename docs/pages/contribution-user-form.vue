@@ -35,79 +35,93 @@ const snippets = [
       </p>
     </div>
     <h2 id="contribution-user-form-props" tabindex="-1">Props</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Prop</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>modelValue</code></td>
-          <td><code>string</code></td>
-          <td><code>''</code></td>
-          <td>The username, with or without the leading <code>@</code>.</td>
-        </tr>
-        <tr>
-          <td><code>loading</code></td>
-          <td><code>boolean</code></td>
-          <td><code>false</code></td>
-          <td>Disables the input and shows <em>Loading…</em></td>
-        </tr>
-        <tr>
-          <td><code>label</code></td>
-          <td><code>string</code></td>
-          <td><code>'GitHub username'</code></td>
-          <td>Label above the input.</td>
-        </tr>
-        <tr>
-          <td><code>placeholder</code></td>
-          <td><code>string</code></td>
-          <td><code>'username'</code></td>
-          <td>Input placeholder.</td>
-        </tr>
-        <tr>
-          <td><code>buttonLabel</code></td>
-          <td><code>string</code></td>
-          <td><code>'Load profile'</code></td>
-          <td>Submit button text.</td>
-        </tr>
-        <tr>
-          <td><code>palette</code></td>
-          <td><code>string</code></td>
-          <td><code>'forest'</code></td>
-          <td>Sets <code>data-cg-palette</code>.</td>
-        </tr>
-        <tr>
-          <td><code>theme</code></td>
-          <td><code>string</code></td>
-          <td><code>'auto'</code></td>
-          <td>Sets <code>data-cg-theme</code>.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-user-form-props"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Prop</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>modelValue</code></td>
+            <td><code>string</code></td>
+            <td><code>''</code></td>
+            <td>The username, with or without the leading <code>@</code>.</td>
+          </tr>
+          <tr>
+            <td><code>loading</code></td>
+            <td><code>boolean</code></td>
+            <td><code>false</code></td>
+            <td>Disables the input and shows <em>Loading…</em></td>
+          </tr>
+          <tr>
+            <td><code>label</code></td>
+            <td><code>string</code></td>
+            <td><code>'GitHub username'</code></td>
+            <td>Label above the input.</td>
+          </tr>
+          <tr>
+            <td><code>placeholder</code></td>
+            <td><code>string</code></td>
+            <td><code>'username'</code></td>
+            <td>Input placeholder.</td>
+          </tr>
+          <tr>
+            <td><code>buttonLabel</code></td>
+            <td><code>string</code></td>
+            <td><code>'Load profile'</code></td>
+            <td>Submit button text.</td>
+          </tr>
+          <tr>
+            <td><code>palette</code></td>
+            <td><code>string</code></td>
+            <td><code>'forest'</code></td>
+            <td>Sets <code>data-cg-palette</code>.</td>
+          </tr>
+          <tr>
+            <td><code>theme</code></td>
+            <td><code>string</code></td>
+            <td><code>'auto'</code></td>
+            <td>Sets <code>data-cg-theme</code>.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h2 id="contribution-user-form-events" tabindex="-1">Events</h2>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Event</th>
-          <th>Payload</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>update:modelValue</code></td>
-          <td><code>username: string</code></td>
-        </tr>
-        <tr>
-          <td><code>submit</code></td>
-          <td><code>username: string</code></td>
-        </tr>
-      </tbody>
-    </table>
+    <div
+      class="table-scroll"
+      role="region"
+      aria-labelledby="contribution-user-form-events"
+      tabindex="0"
+    >
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Event</th>
+            <th scope="col">Payload</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>update:modelValue</code></td>
+            <td><code>username: string</code></td>
+          </tr>
+          <tr>
+            <td><code>submit</code></td>
+            <td><code>username: string</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <p>
       The form uses <code>@submit.prevent</code>, so pressing <kbd>Enter</kbd> in the input emits
       <code>submit</code> and never reloads the page.

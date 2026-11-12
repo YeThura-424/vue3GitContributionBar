@@ -36,42 +36,44 @@ const snippets = [
     </p>
     <CodeBlock :code="snippets[0].code" :title="snippets[0].lang" />
     <h3 id="composables-options" tabindex="-1">Options</h3>
-    <table tabindex="0">
-      <thead>
-        <tr>
-          <th>Option</th>
-          <th>Type</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><code>username</code></td>
-          <td><code>MaybeRefOrGetter&lt;string&gt;</code></td>
-          <td><code>''</code></td>
-          <td>Reactive handle; loads as soon as it is set.</td>
-        </tr>
-        <tr>
-          <td><code>year</code></td>
-          <td><code>MaybeRefOrGetter&lt;number | string&gt;</code></td>
-          <td>current year</td>
-          <td>Reactive year to display.</td>
-        </tr>
-        <tr>
-          <td><code>autoLoad</code></td>
-          <td><code>boolean</code></td>
-          <td><code>true</code></td>
-          <td>Fetch immediately and when the handle changes.</td>
-        </tr>
-        <tr>
-          <td><code>fetchFn</code></td>
-          <td><code>typeof fetch</code></td>
-          <td>global</td>
-          <td>Inject <code>fetch</code> for tests, proxies or caching.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-scroll" role="region" aria-labelledby="composables-options" tabindex="0">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Option</th>
+            <th scope="col">Type</th>
+            <th scope="col">Default</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>username</code></td>
+            <td><code>MaybeRefOrGetter&lt;string&gt;</code></td>
+            <td><code>''</code></td>
+            <td>Reactive handle; loads as soon as it is set.</td>
+          </tr>
+          <tr>
+            <td><code>year</code></td>
+            <td><code>MaybeRefOrGetter&lt;number | string&gt;</code></td>
+            <td>current year</td>
+            <td>Reactive year to display.</td>
+          </tr>
+          <tr>
+            <td><code>autoLoad</code></td>
+            <td><code>boolean</code></td>
+            <td><code>true</code></td>
+            <td>Fetch immediately and when the handle changes.</td>
+          </tr>
+          <tr>
+            <td><code>fetchFn</code></td>
+            <td><code>typeof fetch</code></td>
+            <td>global</td>
+            <td>Inject <code>fetch</code> for tests, proxies or caching.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <h3 id="composables-behaviour" tabindex="-1">Behaviour</h3>
     <ul>
       <li>
