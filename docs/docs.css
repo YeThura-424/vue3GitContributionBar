@@ -394,12 +394,12 @@
 }
 .reference-content .cg-tooltip p {
   margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.4;
   color: var(--color-cg-text);
 }
 .reference-content .cg-tooltip p + p {
-  margin-top: 6px;
+  margin-top: 2px;
   color: var(--color-cg-muted);
 }
 @media (max-width: 640px) {

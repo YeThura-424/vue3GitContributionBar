@@ -46,13 +46,13 @@ const position = computed(() => ({
 <template>
   <div
     v-bind="cgAttrs"
-    class="cg-tooltip pointer-events-none absolute z-50 min-w-[190px] max-w-[260px] rounded-lg border border-cg-border bg-cg-field px-4 py-3 font-cg-sans text-sm leading-relaxed text-cg-text shadow-md"
+    class="cg-tooltip pointer-events-none absolute z-50 w-max max-w-[220px] rounded-md border border-cg-border bg-cg-field px-3 py-2 font-cg-sans text-xs leading-snug text-cg-text shadow-md"
     :style="position"
     role="status"
   >
     <slot :count="label" :date="date" :rawCount="count">
       <p class="m-0 font-semibold">{{ label }}</p>
-      <p v-if="date" class="m-0 mt-1 text-cg-muted">{{ date }}</p>
+      <p v-if="date" class="m-0 mt-0.5 text-cg-muted">{{ date }}</p>
     </slot>
   </div>
 </template>
