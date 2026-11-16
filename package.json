@@ -12,6 +12,18 @@
     "3d"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YeThura-424/vue3GitContributionBar.git"
+  },
+  "homepage": "https://github.com/YeThura-424/vue3GitContributionBar#readme",
+  "bugs": {
+    "url": "https://github.com/YeThura-424/vue3GitContributionBar/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "type": "module",
   "sideEffects": [
     "**/*.css"
@@ -43,11 +55,14 @@
     "test:watch": "vitest",
     "format": "prettier --write \"**/*.{ts,mts,vue,md,json,css}\"",
     "format:check": "prettier --check \"**/*.{ts,mts,vue,md,json,css}\"",
-    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+    "check:package": "node scripts/check-package.mjs",
+    "release:check": "npm run typecheck && npm test && npm run build && npm run check:package",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run release:check"
   },
   "peerDependencies": {
     "three": ">=0.160.0",
-    "vue": "^3.4.0"
+    "vue": "^3.5.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -67,6 +82,6 @@
     "vue-tsc": "^3.3.11"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": "^20.19.0 || >=22.12.0"
   }
 }

@@ -21,12 +21,14 @@ export default defineConfig({
     lib: {
       entry: fileURLToPath(new URL('./src/index.ts', import.meta.url)),
       name: 'VueContributionGraph3D',
+      cssFileName: 'style',
       fileName: (format) => (format === 'es' ? 'index.js' : 'index.cjs'),
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['vue', 'three', /^three\//],
       output: {
+        exports: 'named',
         globals: { vue: 'Vue', three: 'THREE' },
       },
     },
