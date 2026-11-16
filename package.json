@@ -1,6 +1,6 @@
 {
   "name": "vue-contribution-graph-3d",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue 3 component library for an interactive 3D GitHub contribution graph, rendered with Three.js.",
   "keywords": [
     "vue",
