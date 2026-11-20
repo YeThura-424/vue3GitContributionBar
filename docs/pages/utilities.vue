@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import CodeBlock from '../CodeBlock.vue'
 
 const snippets = [
@@ -85,7 +86,7 @@ const snippets = [
     <p>
       <code>{ total, activeDays, longestStreak, bestDay }</code>. Ignores
       <code>isFuture</code> days, so a partial year reports honest numbers. See
-      <a href="#composables"><code>useContributionStats</code></a
+      <RouterLink to="/composables"><code>useContributionStats</code></RouterLink
       >.
     </p>
     <h2 id="utilities-sample-data" tabindex="-1">Sample data</h2>
@@ -93,7 +94,8 @@ const snippets = [
       <code>buildSampleContributions(year, seed?)</code>
     </h3>
     <p>
-      The pure version of <a href="#composables"><code>useSampleContributions</code></a
+      The pure version of
+      <RouterLink to="/composables"><code>useSampleContributions</code></RouterLink
       >. Default seed is <code>20260921</code>.
     </p>
     <h3 id="utilities-mulberry32-seed" tabindex="-1"><code>mulberry32(seed)</code></h3>

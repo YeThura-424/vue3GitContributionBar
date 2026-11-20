@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import CodeBlock from '../CodeBlock.vue'
 
 import { computed, ref } from 'vue'
@@ -63,7 +64,7 @@ const snippets = [
     </p>
     <p>
       Already own the data? Pass an array of days through <code>data</code> instead — read
-      <a href="#data">Working with data</a> for the exact format.
+      <RouterLink to="/data">Working with data</RouterLink> for the exact format.
     </p>
     <h2 id="getting-started-load-a-real-profile" tabindex="-1">Load a real profile</h2>
     <p>Bind the handle to a <code>ref</code> when it comes from your own form:</p>
