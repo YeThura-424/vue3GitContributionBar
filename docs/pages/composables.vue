@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import CodeBlock from '../CodeBlock.vue'
 
 const snippets = [
@@ -92,7 +93,7 @@ const snippets = [
     <h2 id="composables-usecontributionstats" tabindex="-1"><code>useContributionStats</code></h2>
     <CodeBlock :code="snippets[1].code" :title="snippets[1].lang" />
     <p>
-      Wraps <a href="#utilities"><code>computeStats</code></a
+      Wraps <RouterLink to="/utilities"><code>computeStats</code></RouterLink
       >. Returns zeros for an empty or missing array instead of throwing.
     </p>
     <h2 id="composables-usesamplecontributions" tabindex="-1">
